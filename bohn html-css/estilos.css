@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;1,200;1,400&display=swap');
+
+/* header */
+.header {
+    background-color: #C7C7C4;
+    height: 170px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.header .content-section img {
+    width: 280px; 
+    margin-right: 20px; 
+  }
+
+  .header span {
+    display: inline-block; 
+    vertical-align: middle; 
+  }
+
+  /* promos */
+.promos {
+    font-family: 'Poppins';
+    color: #937A26;
+    text-align: center;
+    font-size: 30px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+}
+
+/* body */
+.treatments {
+    background-color: #f2f2f2;
+    padding: 50px 0;
+  }
+  
+.treatments .content-section {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px;
+  }
+  
+.treatments .treatment-item {
+    position: relative;
+    cursor: pointer;
+  }
+  
+.treatments .treatment-item img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  }
+
+.treatments .treatment-item:hover .treatment-buttons {
+    opacity: 1;
+  }
+  
+.treatments .treatment-buttons {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(213, 193, 126, 0.8);
+    padding: 10px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+  }
+.treatments .treatment-buttons a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Poppins';
+  }
+
+
+/* footer */
+.contact-information{
+    font-family: 'Poppins';
+    background-color: #C7C7C4;
+    padding: 10px 0 50px 0;
+    color: #EFEEEE;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+.contact-information .content-section{
+    max-width: 1000px;
+    margin: auto;
+    padding: 0 20px;
+}
+.contact-information .content-section h3{
+    text-transform: uppercase;
+    font-size: 25px;
+    text-decoration: none;
+}
+.contact-information .content-section .row{
+    display: flex;
+    justify-content: space-around;
+}
+.contact-information .content-section .row .col{
+    margin-top: 50px;
+}
+.contact-information .content-section .row .col h2{
+    color: #937A26;
+    text-decoration: none;
+}
+.contact-information .content-section .row .col .i {
+    cursor: pointer;
+}
+
+/* responsive */
+@media (max-width: 1024px) {
+    .treatments .content-section {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .treatments .content-section {
+      grid-template-columns: 1fr;
+    }
+  }
+
+@media screen and (max-width:800px){
+    .skills .content-section .row{
+        display: block;
+    }
+    .skills .content-section .row .col {
+        width: 100%;
+        text-align: center;
+    }
+    .skills .content-section .row .col .bar-content{
+        justify-content: center;
+    }
+    .aboutme .content-section .row {
+        display: block;
+    }
+    .aboutme .content-section .row .col {
+        width: 100%;
+        margin: auto;
+        margin-top: 20px;
+    } 
+    .resume .content-section .info .col{
+        width: 90%;
+        margin: auto;
+    }
+    .resume .content-section .info .col .title{
+        width: 100%;
+        text-align: center;
+    }
+    .resume .content-section .info .col table{
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+    .contact-information .content-section .row{
+        display: block;
+    }
+}
+
+
+
+
