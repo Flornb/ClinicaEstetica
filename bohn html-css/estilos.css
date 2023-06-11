@@ -37,7 +37,7 @@
 /* body */
 .treatments {
     background-color: #f2f2f2;
-    padding: 50px 0;
+    padding: 100px 0;
   }
   
 .treatments .content-section {
@@ -57,19 +57,20 @@
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
   }
 
-.treatments .treatment-item:hover .treatment-buttons {
-    opacity: 1;
+.treatments .treatment-buttons:hover {
+    /* opacity: 1; */
+    background-color: #937A26;
   }
   
 .treatments .treatment-buttons {
     position: absolute;
-    bottom: 0;
+    bottom: -35px;
     left: 0;
     right: 0;
-    background-color: rgba(213, 193, 126, 0.8);
+    background-color: rgba(197, 163, 52, 0.8);
     padding: 10px;
     text-align: center;
-    opacity: 0;
+    opacity: 1;
     transition: opacity 0.3s ease;
     border-radius: 10px;
   }
@@ -78,9 +79,32 @@
     text-decoration: none;
     font-weight: bold;
     font-family: 'Poppins';
+    font-size: 12px;
   }
-
-
+  .treatments .treatment-buttons-two:hover {
+    /* opacity: 1; */
+    background-color:#937A26;
+  }
+  .treatments .treatment-buttons-two {
+    position: absolute;
+    bottom: -75px;
+    left: 0;
+    right: 0;
+    background-color: rgba(197, 163, 52, 0.8);
+    padding: 10px;
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    border-radius: 10px;
+  }
+  .treatments .treatment-buttons-two a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Poppins';
+    font-size: 12px;
+  }
+  
 /* footer */
 .contact-information{
     font-family: 'Poppins';
