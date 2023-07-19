@@ -1,114 +1,126 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;1,200;1,400&display=swap');
 
+
 /* header */
 .header {
-    background-color: #C7C7C4;
-    height: 170px;
+    background-image: linear-gradient(to left, rgba(107, 104, 93, 0.8), #c7c7c4);
+    height: 190px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    /* position: fixed; */
+    top: 0;
+    left: 0;
 }
 
 .header .content-section img {
     width: 280px; 
-    margin-right: 20px; 
+    margin-right: 10px; 
   }
 
-  .header span {
+.header span {
     display: inline-block; 
     vertical-align: middle; 
   }
 
-  /* promos */
-.promos {
+  /* titulos y secciones */
+.title {
     font-family: 'Poppins';
-    color: #937A26;
+    background-image: linear-gradient(to left, rgba(107, 104, 93, 0.8), #8e99a6);
+    color: white;
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
+    padding: 10px;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 10px;
+    margin-bottom: -50px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
     border-radius: 10px;
+    margin-top: 60px;
 }
 
-/* body */
-.treatments {
-    background-color: #f2f2f2;
-    padding: 100px 0;
-  }
-  
+/* body */  
 .treatments .content-section {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 50px;
+    grid-gap: 40px;
+    margin-top: 50px;
+    padding: 10px;
   }
   
 .treatments .treatment-item {
     position: relative;
     cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 50px;
   }
   
 .treatments .treatment-item img {
     width: 100%;
+    /* height: 100%; */
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    /* margin-top: 50px; */
   }
 
 .treatments .treatment-buttons:hover {
     /* opacity: 1; */
-    background-color: #937A26;
+    background-color: #c7c7c4;
   }
   
 .treatments .treatment-buttons {
     position: absolute;
-    bottom: -35px;
+    bottom: -50px;
     left: 0;
     right: 0;
-    background-color: rgba(197, 163, 52, 0.8);
+    background-color: #af994d;
     padding: 10px;
     text-align: center;
     opacity: 1;
     transition: opacity 0.3s ease;
     border-radius: 10px;
+    border: 2px solid #c7c7c4;
   }
 .treatments .treatment-buttons a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
     font-family: 'Poppins';
-    font-size: 12px;
+    font-size: 20px;
   }
   .treatments .treatment-buttons-two:hover {
     /* opacity: 1; */
-    background-color:#937A26;
+    background-color: #c7c7c4;
   }
   .treatments .treatment-buttons-two {
     position: absolute;
-    bottom: -75px;
+    bottom: -105px;
     left: 0;
     right: 0;
-    background-color: rgba(197, 163, 52, 0.8);
+    background-color: #af994d;
     padding: 10px;
     text-align: center;
     opacity: 1;
     transition: opacity 0.3s ease;
     border-radius: 10px;
+    border: 2px solid #c7c7c4;
+    /* margin-top: 50px; */
   }
   .treatments .treatment-buttons-two a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 600;
     font-family: 'Poppins';
-    font-size: 12px;
+    font-size: 20px;
   }
   
 /* footer */
 .contact-information{
     font-family: 'Poppins';
-    background-color: #C7C7C4;
+    /* margin-top: 80px; */
+    background-color: rgba(107, 104, 93, 0.8); 
     padding: 10px 0 50px 0;
     color: #EFEEEE;
     text-align: center;
@@ -117,11 +129,11 @@
 .contact-information .content-section{
     max-width: 1000px;
     margin: auto;
-    padding: 0 20px;
+    padding: 5 10px;
 }
 .contact-information .content-section h3{
     text-transform: uppercase;
-    font-size: 25px;
+    font-size: 18px;
     text-decoration: none;
 }
 .contact-information .content-section .row{
@@ -132,7 +144,7 @@
     margin-top: 50px;
 }
 .contact-information .content-section .row .col h2{
-    color: #937A26;
+    color: rgba(19, 18, 18, 0.849);
     text-decoration: none;
 }
 .contact-information .content-section .row .col .i {
@@ -146,13 +158,25 @@
     }
   }
   
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
+    .treatments .content-section {
+      grid-template-columns: 2fr;
+    }
+  }
+
+  @media (max-width: 500px) {
     .treatments .content-section {
       grid-template-columns: 1fr;
     }
   }
 
-@media screen and (max-width:800px){
+  @media screen and (max-width:800px){
+    .contact-information .content-section .row{
+      display: block;
+  }
+}
+    /* 
+   
     .skills .content-section .row{
         display: block;
     }
@@ -182,11 +206,9 @@
     .resume .content-section .info .col table{
         margin-top: 10px;
         margin-bottom: 30px;
-    }
-    .contact-information .content-section .row{
-        display: block;
-    }
-}
+    } 
+        */
+
 
 
 
