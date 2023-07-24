@@ -1,120 +1,174 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;1,200;1,400&display=swap');
 
+/* html {
+  scroll-behavior: smooth;
+} */
+
+.background-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-image: url('./assets/30.webp'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: blur(1px); 
+}
 
 /* header */
 .header {
-    background-image: linear-gradient(to left, rgba(107, 104, 93, 0.8), #c7c7c4);
-    height: 190px;
+    background-image: linear-gradient(to left, #EFEEEE, #c7c7c4);
+    /* background-color: #c7c7c4; */
+    opacity: 0.9;
+    height: 150px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
     border-radius: 10px;
-    /* position: fixed; */
+    position: fixed;
     top: 0;
     left: 0;
+    z-index: 100;
+    padding: 100px;
+    
 }
-
-.header .content-section img {
+/* logo */
+.header img {
     width: 280px; 
-    margin-right: 10px; 
+    /* margin-right: 10px;  */
+    justify-content: center;
   }
 
-.header span {
-    display: inline-block; 
-    vertical-align: middle; 
-  }
+/* navigation bar */
+.header .nav {
+  /* position: relative; */
+  display: flex;
+  /* background-color: #8e99a6; */
+  /* color: #EFEEEE; */
+}
+.nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.nav li {
+  margin-right: 20px;
+}
+.nav a {
+  color: #ca0808;
+  text-decoration: none;
+}
+.nav a:hover {
+  text-decoration: underline;
+}
 
   /* titulos y secciones */
 .title {
-    font-family: 'Poppins';
-    background-image: linear-gradient(to left, rgba(107, 104, 93, 0.8), #8e99a6);
-    color: white;
-    text-align: center;
-    font-size: 25px;
-    padding: 10px;
-    justify-content: center;
-    margin-bottom: -50px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-    border-radius: 10px;
-    margin-top: 60px;
+  font-family: 'Poppins';
+  background-image: linear-gradient(to left, rgba(107, 104, 93, 0.8), #8e99a6);
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  padding: 10px;
+  margin-bottom: -50px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  margin-top: 60px;
+  /* scroll-behavior: smooth; */
 }
 
-/* body */  
+/* body - container treatments */
+.treatments {
+  padding-top: 150px;
+}
+
 .treatments .content-section {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 40px;
-    margin-top: 50px;
-    padding: 10px;
-  }
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 40px;
+  margin-top: 50px;
+  padding: 10px;
+  /* padding-top: 150px; */
+}
   
 .treatments .treatment-item {
-    position: relative;
-    cursor: pointer;
-    margin-top: 10px;
-    margin-bottom: 50px;
-  }
+  position:  relative;
+  cursor: pointer;
+  margin-top: 10px;
+  margin-bottom: 50px;
+  /* transition: width 3s; */
+}
   
 .treatments .treatment-item img {
-    width: 100%;
-    /* height: 100%; */
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-    /* margin-top: 50px; */
-  }
+  width: 100%;
+  display: block;
+  margin: 5px auto;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4); 
+}
+
+/* .treatments .treatment-item:hover {
+  width: 530px;
+} */
 
 .treatments .treatment-buttons:hover {
     /* opacity: 1; */
-    background-color: #c7c7c4;
-  }
+  background-color: #c7c7c4;
+}
   
 .treatments .treatment-buttons {
-    position: absolute;
-    bottom: -50px;
-    left: 0;
-    right: 0;
-    background-color: #af994d;
-    padding: 10px;
-    text-align: center;
-    opacity: 1;
-    transition: opacity 0.3s ease;
-    border-radius: 10px;
-    border: 2px solid #c7c7c4;
-  }
+  background-color: #af994d;
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  text-align: center;
+  /* opacity: 1; */
+  transition: background-color 1s ease;
+  border-radius: 10px;
+  /* border: 2px solid #c7c7c4; */
+  /* width: 95%; */
+}
+
 .treatments .treatment-buttons a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    font-family: 'Poppins';
-    font-size: 20px;
-  }
-  .treatments .treatment-buttons-two:hover {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Poppins';
+  font-size: 20px;
+}
+.treatments .treatment-buttons-two:hover {
     /* opacity: 1; */
-    background-color: #c7c7c4;
-  }
-  .treatments .treatment-buttons-two {
-    position: absolute;
-    bottom: -105px;
-    left: 0;
-    right: 0;
-    background-color: #af994d;
-    padding: 10px;
-    text-align: center;
-    opacity: 1;
-    transition: opacity 0.3s ease;
-    border-radius: 10px;
-    border: 2px solid #c7c7c4;
+  background-color: #c7c7c4;
+}
+.treatments .treatment-buttons-two {
+  position: absolute;
+  bottom: -105px;
+  left: 0;
+  right: 0;
+  background-color: #af994d;
+  padding: 10px;
+  text-align: center;
+  /* opacity: 1; */
+  transition: background-color 1s ease;
+  border-radius: 10px;
+  /* border: 2px solid #c7c7c4; */
     /* margin-top: 50px; */
-  }
-  .treatments .treatment-buttons-two a {
-    color: white;
-    text-decoration: none;
-    font-weight: 600;
-    font-family: 'Poppins';
-    font-size: 20px;
-  }
+}
+.treatments .treatment-buttons-two a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Poppins';
+  font-size: 20px;
+}
   
 /* footer */
 .contact-information{
@@ -156,18 +210,28 @@
     .treatments .content-section {
       grid-template-columns: repeat(2, 1fr);
     }
+    /* .treatments .treatment-item:hover {
+      width: 380px;
+    } */
   }
-  
   @media (max-width: 600px) {
     .treatments .content-section {
       grid-template-columns: 2fr;
     }
+    /* .treatments .treatment-item:hover {
+      width: 330px;
+    }
+     */
   }
 
   @media (max-width: 500px) {
     .treatments .content-section {
       grid-template-columns: 1fr;
     }
+    /* .treatments .treatment-item:hover {
+      width: 280px;
+    } */
+    
   }
 
   @media screen and (max-width:800px){

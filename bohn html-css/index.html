@@ -12,22 +12,46 @@
     <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/dsbekpj9h/image/upload/v1684103633/bohn%20clinica%20estetica1/sinfondo-4-01-01_eel8pi.png">
     <title>Bohn Clinica Estética</title>
 </head>
-<body style="background-color: #EFEEEE;">
+<body>
+    <div class="background-container"></div>
     <!-- HEADER -->
-    <section class="header">
-        <div class="content-section">
-            <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1689716072/bohn%20clinica%20estetica1/sinfondo-3-01_woo4er.png" alt="logo"></a>
-        </div>
-    </section>
-    <!-- navbar -->
-    <!-- <section class="nav">
-        <nav>
-
+    <header class="header">
+        <nav class="nav">
+            <ul>
+                <!-- navbar1 -->
+                <li class="treatment-nav"><a href=''>Tratamientos</a>
+                    <ul class="treatments-list">
+                        <li><a href='#body-section'>Corporales</a></li>
+                        <li><a href='#facial-section'>Faciales</a></li>
+                        <li><a href='#depilation-section'>Depilación</a></li>
+                        <li><a href='#massage-section'>Masajes</a></li>
+                        <li><a href='#bride-section'>Novias</a></li>
+                    </ul>
+                </li>
+                <li><a href='#card-section'>Gift Cards</a></li>
+                <li><a href='#nutrition-section'>Nutrición</a></li>
+                <!-- logo -->
+                <li class="logo"><a href="#"><img src="./assets/sinfondo-4-01.webp" alt="logo"/></a></li>
+                <!-- navbar2 -->
+                <li class="promos-convenios"><a href=''>Promociones y Convenios</a>
+                    <ul>
+                        <li><a href=''>Convenios</a></li>
+                        <li><a href='#promos-section'>Promos</a></li>
+                    </ul>
+                </li>               
+                <li><a href="./assets/Bohn Clinica Estetica TERMINOS Y CONDICIONES.pdf" target="_blank">Terminos y Condiciones</a></li>
+                <li><a href=''>Agendá tu hora</a></li>
+                <li><a href='#contact-information'>Contacto</a></li>  
+            </ul>
         </nav>
+    </header>
+    <!-- navbar -->
+    <!-- <section class="navbar">
+        
     </section> -->
 
     <!-- TREATMETS -->
-    <section class="treatments">
+    <main class="treatments">
         <!-- titulo -->
 
         <!-- <div class="title">
@@ -40,7 +64,7 @@
         </div> -->
 
         <!-- titulo -->
-        <div class="title">
+        <div class="title" id="body-section">
             <span>
                TRATAMIENTOS CORPORALES
             </span>
@@ -73,17 +97,17 @@
             </div>
         </div>
         <!-- titulo -->
-        <div class="title">
+        <div class="title" id="facial-section">
             <span>
                TRATAMIENTOS FACIALES
             </span>
         </div>
         <!-- facial -->
-        <div class="content-section"> 
+        <div class="content-section" > 
             <div class="treatment-item">
                 <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1689726625/bohn%20clinica%20estetica1/imgs%20webp/rejuvenecimiento-facial_szdb9d.webp" alt="Rejuvenecimiento Facial">
                 <div class="treatment-buttons">
-                  <a href="https://wa.me/56932066518" target="_blank">Comprar</a>
+                  <a href="https://www.webpay.cl/form-pay/110611?fbclid=PAAaZjAPNEL_HS18hvLY5YhQvFWwkcmlvf7Iba-1eriwtnSEPAoFPKdW9-0p8" target="_blank">Comprar</a>
                 </div>
             </div>
             <div class="treatment-item">
@@ -118,13 +142,13 @@
             </div>
         </div>
         <!-- titulo -->
-        <div class="title">
+        <div class="title" id="depilation-section">
             <span>
                DEPILACIÓN
             </span>
         </div>
             <!-- depilacion -->
-        <div class="content-section"> 
+        <div class="content-section" > 
             <div class="treatment-item">
                 <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1688259686/bohn%20clinica%20estetica1/imgs%20webp/depi-laser-pack-base_webp_anibc0.webp" alt="Depilacion Laser Pack Base">
                 <div class="treatment-buttons">
@@ -139,7 +163,7 @@
             </div>
         </div>
         <!-- titulo -->
-        <div class="title">
+        <div class="title" id="nutrition-section">
             <span>
                NUTRICIÓN
             </span>
@@ -159,7 +183,7 @@
             </div>
         </div>
         <!-- titulo -->
-        <div class="title">
+        <div class="title" id="massage-section">
             <span>
                SPA & MASAJES
             </span>
@@ -186,7 +210,7 @@
             </div>
         </div>
         <!-- titulo -->
-        <div class="title">
+        <div class="title" id="bride-section">
             <span>
                NOVIAS
             </span>
@@ -208,7 +232,7 @@
         </div>
 
         <!-- titulo -->
-        <div class="title">
+        <div class="title" id="card-section">
             <span>
                GIFT CARDS
             </span>
@@ -242,9 +266,9 @@
         </div>
 
         <!-- titulo -->
-        <div class="title">
+        <div class="title" id="promos-section">
             <span>
-               REFERIDOS
+               DESCUENTOS Y PROMOCIONES
             </span>
         </div>
         <!-- referidos -->
@@ -256,7 +280,8 @@
                 </div>
             </div>
         </div>
-    </section>
+    </main>
+
 
     <!-- FOOTER -->
     <section class="contact-information" id="contact-information">
@@ -301,8 +326,7 @@
                         <i class="fa-solid fa-location-dot"> </i> <a href="https://www.google.com/maps/dir//Alonso+de+C%C3%B3rdova+5870+Las+Condes+Regi%C3%B3n+Metropolitana/@-33.4073814,-70.5701058,16z/data=!4m5!4m4!1m0!1m2!1m1!1s0x9662cedee9858337:0xcb3db4bb7651b666" target="_blank" style="text-decoration: none; color: inherit;">Ubicación</a>
                     </h2>
                     <span class="contact-info">ALONSO DE CORDOVA 5870 OFICINA 218, LAS CONDES</span>
-                </div>
-                
+                </div>  
             </div>
         </div>
     </section>
