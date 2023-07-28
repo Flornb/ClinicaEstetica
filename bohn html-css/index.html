@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;1,200;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="estilos.css">
     <link rel="icon" type="image/x-icon" href="https://res.cloudinary.com/dsbekpj9h/image/upload/v1684103633/bohn%20clinica%20estetica1/sinfondo-4-01-01_eel8pi.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <title>Bohn Clinica Estética</title>
 </head>
 <body>
@@ -17,38 +18,52 @@
     <!-- HEADER -->
     <header class="header">
         <nav class="nav">
-            <ul>
-                <!-- navbar1 -->
-                <li class="treatment-nav"><a href=''>Tratamientos</a>
-                    <ul class="treatments-list">
+
+            <!-- logo -->
+            <img src="./assets/sinfondo-4-01.webp" alt="logo" data-aos="zoom-in-right" data-aos-duration="2000"/>
+            
+            <!-- hamburger menu in small screens-->
+            <div class="menu-icon">
+                <!-- <div class="hamburger"></div> -->
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                </svg> 
+            </div>  
+
+            <!-- navbar -->
+            <ul class="ul-nav">
+                <!-- ul inside li -->
+                <li class="treatments-nav"><a href='#treatments-list'>Tratamientos</a>
+                    <div class="submenu-container">
+                        <ul class="treatments-list">
                         <li><a href='#body-section'>Corporales</a></li>
                         <li><a href='#facial-section'>Faciales</a></li>
                         <li><a href='#depilation-section'>Depilación</a></li>
                         <li><a href='#massage-section'>Masajes</a></li>
                         <li><a href='#bride-section'>Novias</a></li>
-                    </ul>
+                        </ul>
+                    </div>
                 </li>
+
+                <!-- other items of navbar  -->
                 <li><a href='#card-section'>Gift Cards</a></li>
                 <li><a href='#nutrition-section'>Nutrición</a></li>
-                <!-- logo -->
-                <li class="logo"><a href="#"><img src="./assets/sinfondo-4-01.webp" alt="logo"/></a></li>
-                <!-- navbar2 -->
-                <li class="promos-convenios"><a href=''>Promociones y Convenios</a>
-                    <ul>
+
+                <!-- another ul inside li -->
+                <li class="promos-convenios"><a href='#promos-list'>Promos | Convenios</a>
+                    <ul class="promos-list">
                         <li><a href=''>Convenios</a></li>
                         <li><a href='#promos-section'>Promos</a></li>
                     </ul>
-                </li>               
-                <li><a href="./assets/Bohn Clinica Estetica TERMINOS Y CONDICIONES.pdf" target="_blank">Terminos y Condiciones</a></li>
-                <li><a href=''>Agendá tu hora</a></li>
+                </li>
+
+                <!-- other items of navbar  -->               
+                <li><a href="./assets/Bohn Clinica Estetica TERMINOS Y CONDICIONES.pdf" target="_blank">Términos y Condiciones</a></li>
+                <!-- <li><a href=''>Agendá tu hora</a></li> -->
                 <li><a href='#contact-information'>Contacto</a></li>  
             </ul>
         </nav>
     </header>
-    <!-- navbar -->
-    <!-- <section class="navbar">
-        
-    </section> -->
 
     <!-- TREATMETS -->
     <main class="treatments">
@@ -71,25 +86,25 @@
         </div>
         <!-- tratamientos corporales -->
         <div class="content-section"> 
-            <div class="treatment-item">
+            <div class="treatment-item" data-aos="flip-up">
                 <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1689726625/bohn%20clinica%20estetica1/imgs%20webp/anticelulitico-webp_cssv1k.webp" alt="Anticelulitico">
                 <div class="treatment-buttons">
                   <a href="https://www.webpay.cl/form-pay/96345" target="_blank">Comprar</a>
                 </div>
             </div>
-            <div class="treatment-item">
+            <div class="treatment-item" data-aos="flip-up">
                 <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1689726625/bohn%20clinica%20estetica1/imgs%20webp/grasa-localizada-webp_hi9t9l.webp" alt="Grasa Localizada">
                 <div class="treatment-buttons">
                   <a href="https://www.webpay.cl/form-pay/96349" target="_blank">Comprar</a>
                 </div>
             </div>          
-            <div class="treatment-item">
+            <div class="treatment-item" data-aos="flip-up">
                 <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1689726626/bohn%20clinica%20estetica1/imgs%20webp/post_parto_webp_dixgx2.webp" alt="Post Parto">
                 <div class="treatment-buttons">
                   <a href="https://www.webpay.cl/form-pay/96370" target="_blank">Comprar</a>
                 </div>
             </div>
-            <div class="treatment-item">
+            <div class="treatment-item" data-aos="flip-up">
                 <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1689726626/bohn%20clinica%20estetica1/imgs%20webp/hifu-corporal-webp_ogjika.webp" alt="Hifu Corporal">
                 <div class="treatment-buttons">
                   <a href="https://www.webpay.cl/form-pay/96358" target="_blank">Comprar</a>
@@ -104,37 +119,37 @@
         </div>
         <!-- facial -->
         <div class="content-section" > 
-            <div class="treatment-item">
+            <div class="treatment-item" data-aos="flip-up">
                 <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1689726625/bohn%20clinica%20estetica1/imgs%20webp/rejuvenecimiento-facial_szdb9d.webp" alt="Rejuvenecimiento Facial">
                 <div class="treatment-buttons">
                   <a href="https://www.webpay.cl/form-pay/110611?fbclid=PAAaZjAPNEL_HS18hvLY5YhQvFWwkcmlvf7Iba-1eriwtnSEPAoFPKdW9-0p8" target="_blank">Comprar</a>
                 </div>
             </div>
-            <div class="treatment-item">
+            <div class="treatment-item" data-aos="flip-up">
                 <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1689726625/bohn%20clinica%20estetica1/imgs%20webp/hifu-facial-completo-webp_vskjad.webp" alt="Hifu Facial Completo">
                 <div class="treatment-buttons">
                   <a href="https://www.webpay.cl/form-pay/96360" target="_blank">Comprar</a>
                 </div>
             </div>
-            <div class="treatment-item">
+            <div class="treatment-item" data-aos="flip-up">
                 <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1689726625/bohn%20clinica%20estetica1/imgs%20webp/limpieza-profunda-webp_uvjx0s.webp" alt="Limpieza Facial Profunda">
                 <div class="treatment-buttons">
                   <a href="https://www.webpay.cl/form-pay/96362" target="_blank">Comprar (1 sesión)</a>
                 </div>
             </div>
-            <div class="treatment-item">
+            <div class="treatment-item" data-aos="flip-up">
                 <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1689726622/bohn%20clinica%20estetica1/imgs%20webp/microneeding_webp_ywktcj.webp" alt="Microneedling">
                 <div class="treatment-buttons">
                   <a href="https://www.webpay.cl/form-pay/96365" target="_blank">Comprar</a>
                 </div>
             </div>
-            <div class="treatment-item">
+            <div class="treatment-item" data-aos="flip-up">
                 <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1689726625/bohn%20clinica%20estetica1/imgs%20webp/hollywood-peeling-webp_ipridr.webp" alt="Hollywood Peeling">
                 <div class="treatment-buttons">
                   <a href="https://www.webpay.cl/form-pay/96368" target="_blank">Comprar</a>
                 </div>
             </div>
-            <div class="treatment-item">
+            <div class="treatment-item" data-aos="flip-up">
                 <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1689726623/bohn%20clinica%20estetica1/imgs%20webp/peeling_quimico_despigm_webp_nezrwa.webp" alt="Peeling Quimico">
                 <div class="treatment-buttons">
                   <a href="https://www.webpay.cl/form-pay/96369" target="_blank">Comprar</a>
@@ -149,13 +164,13 @@
         </div>
             <!-- depilacion -->
         <div class="content-section" > 
-            <div class="treatment-item">
+            <div class="treatment-item" data-aos="flip-up">
                 <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1688259686/bohn%20clinica%20estetica1/imgs%20webp/depi-laser-pack-base_webp_anibc0.webp" alt="Depilacion Laser Pack Base">
                 <div class="treatment-buttons">
                     <a href="https://www.webpay.cl/form-pay/95587 " target="_blank">Comprar</a>
                 </div>
             </div>
-            <div class="treatment-item">
+            <div class="treatment-item" data-aos="flip-up">
                 <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1689726626/bohn%20clinica%20estetica1/imgs%20webp/depi-laser-pack-plus-webp_s9vl0c.webp" alt="Depilacion Laser Pack Plus">
                 <div class="treatment-buttons">
                     <a href="https://www.webpay.cl/form-pay/105030" target="_blank">Comprar</a>
@@ -170,7 +185,7 @@
         </div>
         <!-- Nutricion -->
         <div class="content-section"> 
-            <div class="treatment-item">
+            <div class="treatment-item" data-aos="flip-up">
                 <div>
                 <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1689726622/bohn%20clinica%20estetica1/imgs%20webp/nutri_webp_ydz7fx.webp" alt="Nutricion">
                 </div>
@@ -190,7 +205,7 @@
         </div>
             <!-- masajes -->
         <div class="content-section"> 
-            <div class="treatment-item">
+            <div class="treatment-item" data-aos="flip-up">
                 <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1689726622/bohn%20clinica%20estetica1/imgs%20webp/masajes_descontracturantes_webp_lrwnsi.webp" alt="Masajes Descontracturantes">
                 <div class="treatment-buttons-two">
                   <a href="https://www.webpay.cl/form-pay/94143" target="_blank">Comprar Pack 2 Sesiones</a>
@@ -199,7 +214,7 @@
                   <a href="https://www.webpay.cl/form-pay/94139" target="_blank">Comprar 1 sesión</a>
                 </div>
             </div>
-            <div class="treatment-item">
+            <div class="treatment-item" data-aos="flip-up">
                 <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1689726627/bohn%20clinica%20estetica1/imgs%20webp/masaje_relajante_webp_rbrdei.webp" alt="Masajes Relajantes">
                 <div class="treatment-buttons-two">
                   <a href="https://www.webpay.cl/form-pay/94141" target="_blank">Comprar Pack 2 Sesiones</a>
@@ -217,13 +232,13 @@
         </div>
         <!-- novias -->
         <div class="content-section">
-            <div class="treatment-item">
+            <div class="treatment-item" data-aos="flip-up">
                 <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1689726626/bohn%20clinica%20estetica1/imgs%20webp/depi-laser-pack-base_webp_e9t9p2.webp" alt="Pack Novia Base">
                 <div class="treatment-buttons">
                   <a href="https://www.webpay.cl/form-pay/106552" target="_blank">Comprar</a>
                 </div>
             </div>
-            <div class="treatment-item">
+            <div class="treatment-item" data-aos="flip-up">
                 <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1689726626/bohn%20clinica%20estetica1/imgs%20webp/pack-novias-plus_webp_b5aaol.webp" alt="Pack Novia Plus">
                 <div class="treatment-buttons">
                   <a href="https://www.webpay.cl/form-pay/106553" target="_blank">Comprar</a>
@@ -239,25 +254,25 @@
         </div>
         <!-- gift cards -->
         <div class="content-section">
-            <div class="treatment-item">
+            <div class="treatment-item" data-aos="flip-up">
                 <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1689726623/bohn%20clinica%20estetica1/imgs%20webp/Eclips_Bohn-Opci%C3%B3n-1_hmkbjs.webp" alt="Gift Card 51000">
                 <div class="treatment-buttons">
                   <a href="https://wa.me/56932066518" target="_blank">Comprar Gift Card $51.000</a>
                 </div>
             </div>
-            <div class="treatment-item">
+            <div class="treatment-item" data-aos="flip-up">
                 <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1689726623/bohn%20clinica%20estetica1/imgs%20webp/Eclips_Bohn-Opci%C3%B3n-2_ykjjor.webp" alt="Gift Card 61000">
                 <div class="treatment-buttons">
                   <a href="https://wa.me/56932066518" target="_blank">Comprar Gift Card $56.000</a>
                 </div>
             </div>
-            <div class="treatment-item">
+            <div class="treatment-item" data-aos="flip-up">
                 <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1689726624/bohn%20clinica%20estetica1/imgs%20webp/Eclips_Bohn-Opci%C3%B3n-3_tjxrco.webp" alt="Gift Card 61000">
                 <div class="treatment-buttons">
                   <a href="https://wa.me/56932066518" target="_blank">Comprar Gift Card $61.000</a>
                 </div>
             </div>
-            <div class="treatment-item">
+            <div class="treatment-item" data-aos="flip-up">
                 <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1689726626/bohn%20clinica%20estetica1/imgs%20webp/gift-card-50-000_webp_do9aye.webp" alt="Gift Card 50000">
                 <div class="treatment-buttons">
                   <a href="https://www.webpay.cl/form-pay/106568" target="_blank">Comprar Gift Card $30.000 (canjeable por una limpieza facial profunda o una sesión de masajes relajantes/descontracturantes o $50.000 de bono para otros tratamientos) </a>
@@ -273,7 +288,7 @@
         </div>
         <!-- referidos -->
         <div class="content-section">
-            <div class="treatment-item">
+            <div class="treatment-item" data-aos="flip-up">
                 <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1689716106/bohn%20clinica%20estetica1/imgs%20webp/REFERIDOS_k92ewz.webp" alt="Referidos">
                 <div class="treatment-buttons">
                   <a href="https://wa.me/56932066518" target="_blank">Comprar</a>
@@ -330,5 +345,58 @@
             </div>
         </div>
     </section>
+
+
+    <!-- js para desplegar submenus -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const treatmentsMenu = document.querySelector('.treatments-nav');
+            const treatmentsSubMenu = document.querySelector('.treatments-list'); 
+            treatmentsMenu.addEventListener('click', function(event){
+                event.preventDefault();
+                treatmentsSubMenu.classList.toggle('show');
+            });
+            
+            const promosMenu = document.querySelector('.promos-convenios');
+            const promosSubMenu = document.querySelector('.promos-list');
+            promosMenu.addEventListener('click', function(event){
+                event.preventDefault();
+                promosSubMenu.classList.toggle('show');
+            });
+
+            document.addEventListener('click', function(event){
+                const targetElement = event.target;
+
+                if(
+                    !targetElement.closest('.treatments-nav') &&
+                    !targetElement.closest('.trearments-list')
+                ) {
+                    treatmentsSubMenu.classList.remove('show');
+                }
+
+                if(
+                    !targetElement.closest('.promos-convenios') &&
+                    !targetElement.closest('.promos-list')
+                ) {
+                    promosSubMenu.classList.remove('show');
+                }
+            });
+        });
+        // animación imagenes con aos
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- hamburger menu -->
+    <script>
+        const menuToggle = document.querySelector('.menu-icon');
+        const ulNav = document.querySelector('.ul-nav');
+
+        menuToggle.addEventListener('click', function() {
+        ulNav.classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
