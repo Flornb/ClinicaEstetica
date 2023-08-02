@@ -24,97 +24,84 @@
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
     position: fixed;
+    flex-direction: row;
     top: 0;
     left: 0;
     z-index: 1;
     padding: 1px;
     font-family: 'Poppins';
-    font-size: 20px;
-    transition: min-height 0.5s ease;
-    
+    font-size: 16px;
+    transition: min-height 0.5s ease; 
 }
 /* .header .scroll {
   height: 20px;
   padding: 20px 0;
-
-
 } */
+
 /* logo */
 .header .logo { 
-    max-height: 200px;
-    transition: height 0.3s;
-  }
+  max-height: 160px;
+  transition: height 0.5s;
+}
 
 /* navigation bar */
+/* menu */
 .header .nav {
   display: flex;
 }
 .header .nav .ul-nav {
-  justify-content: center;
+  /* display:flex; */
+  align-items: center;
 }
-.header .nav .ul-nav li {
+.header .nav .ul-nav li, ul.treatments-list li, ul.promos-list li {
   border-radius: 5px;
   padding: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-}
-.nav ul {
-  display: flex;
+  margin: 5px;
   list-style: none;
+}
+.header .nav ul.treatments-list li, ul.promos-list li {
+  background-color: #af994d;
+ }
+.nav ul.ul-nav {
   padding: 5px;
 }
-.nav li {
-  margin-right: 20px;
+.nav ul.treatments-list.show, ul.promos-list.show {
+  padding: 10px 0px 0px 0px;
 }
 .nav a, .ul a {
   color: #c7c7c4;
   text-decoration: none;
 }
 .nav a:hover {
-  font-size: 22px;
+  font-size: 18px;
   text-shadow: 2px 2px 4px rgba(136, 120, 75, 0.5);
 }
-.ul-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* menu */
-.header .nav .treatments-nav .treatments-list{
-  display: none;
+.header .nav .treatments-nav, .promos-convenios, .cards, .nutri, .terms, .contact  {
   position: relative;
-  left: 0;
-  /* background-color: #af994d; */
-  padding: 2px;
-  border-radius: 5px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-  /* margin-top: 100px; */
 }
-.header .nav .treatments-nav .treatments-list.show {
+.header .nav .ul-nav .treatments-nav .treatments-list, .promos-convenios .promos-list {
+  display: none;
+  position: absolute;
+  top: calc (100% + 5px);
+  left: 0;
+  border-radius: 5px;
+}
+.header .nav .treatments-nav .treatments-list.show, .promos-convenios .promos-list.show {
   display: block;
 }
-.header .nav .promos-convenios .promos-list {
-  display: none;
-  position: relative;
-  left: 0;
-  /* background-color: #af994d; */
-  padding: 2px;
-  border-radius: 5px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-}
-.header .nav .promos-convenios .promos-list.show {
+.header .nav .treatments-nav .treatments-list a, .promos-convenios .promos-list a {
   display: block;
+  padding: 2px;
+  background-color: #af994d; 
 }
 
 /* flecha desplegable para menu */
 .header .nav .treatments-nav a .arrow-icon {
   width: 13px;
   height: 13px;
-  display: inline-block;
-  background-image: url('bohn html-css/assets/flecha.png');
   background-size: contain;
   background-repeat: no-repeat;
   margin-left: 5px;
@@ -122,26 +109,52 @@
 .header .nav .promos-convenios a .arrow-icon {
   width: 13px;
   height: 13px;
-  /* display: inline-block; */
-  background-image: url('bohn html-css/assets/flecha.png');
   background-size: contain;
   background-repeat: no-repeat;
   margin-left: 5px;
 }
 
 /* header-icons */
-.header .header-icons .row {
-  flex-direction: row;
+div.header-icons {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 15px;
   cursor: pointer; 
 }
+div.header-icons img {
+  display: inline-flex;
+  margin-left: 10px;
+  vertical-align: middle;
+}
 
+/* WELCOME SECTION */
+.welcome-section {
+  margin-top: 180px;
+  margin-left: 10px;
+  /* padding: 20px; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  align-items: center;  
+}
+.welcome-section .clinic, .gallery {
+  width: 90%;
+}
+
+/* parrafo */
+.welcome-section .clinic {
+  font-family: 'Poppins';
+  color: #af994d;
+  font-size: 18px;
+}
 /* carrusel gallery */
-.gallery {
+.welcome-section .gallery {
+  display: flex;
   position: relative;
+  justify-content: center;
   overflow: hidden;
-  height: 400px;
-  width: 50%;
-  top: 200px;
+  height: 350px;
+  width: 100%;
   border-radius: 35px;
   align-items: center;
 }
@@ -149,11 +162,8 @@
   position: absolute;
   inset: 0;
   opacity: 0;
-  animation: slide-show 12s infinite;
+  animation: slide-show 10s infinite;
 }
-/* .gallery-item-1{
-  animation-delay: 1s;
-} */
 
 .gallery-item-2{
   animation-delay: 4s;
@@ -187,16 +197,13 @@
   text-align: center;
   font-size: 25px;
   padding: 10px;
-  /* margin-bottom: -50px; */
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
-  margin-top: 60px;
-  /* scroll-behavior: smooth; */
 }
 
 /* body - container treatments */
 .treatments {
-  margin-top: 210px; 
+  margin-top: 20px; 
 }
 
 .treatments .content-section {
@@ -308,84 +315,92 @@
 /* responsive */
 /* hamburguer menu - bigger than 1201 px screens */
 @media screen and (min-width: 1201px) {
+  .header .nav {
+    justify-content: center;
+ } 
   .header .nav .menu-icon {
     display: none;
   }
   .header .nav .ul-nav {
     display: flex;
-    justify-content: space-around;
-    /* width: 100%; */
   }  
 }
 /* small or equal screens than 1200px */
 @media screen and (max-width: 1200px) { 
-  header.header {
-    justify-content: left;
-    /* align-items: center; */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
-
+  .header .logo {
+    margin-left: 15px;
+  }
   .header .nav .ul-nav {
     display: none;
-    flex-direction: column;
-    border-radius: 5px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-    font-size: medium;
     align-items:flex-start;
+    flex-direction: column; 
+    border-radius: 10px;
+    font-size: medium;
+    position: absolute;
+    top: 80%;
   }
   .header .nav .ul-nav.show {
     display: flex;
   }
-  .header .nav .ul-nav .li {
-    padding: 2px;
+  .header .nav .ul-nav .treatments-nav, .cards, .nutri, .promos-convenios, .terms, .contact {
+    position: relative;
+    margin: 2px;
+    background-color: #af994d;    
+  }
+  .header .nav .treatments-nav.show .treatments-list {
+    display: block;
   }
   .header .nav .menu-icon {
+    display: flex;
+    align-items: center;
     opacity: 0.9;
     z-index: 9999;
-    /* top: 8px; */
-    /* right: 20px; */
     cursor: pointer;
     color: #EFEEEE;
-    /* justify-content: center; */
   }
   .header .nav .menu-icon svg {
-    background-color: #af994d; 
+    background-color: #c7c7c4; 
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
     width: 40px;
   }
   .header .nav a:hover {
     font-size: 19px;
-    /* font-weight: bold; */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   } 
 }
-
+/* reduccion de tamaño y alineado en pantallas menores a 370px */
+@media screen and (max-width: 370px) {
+  .header .header-icons img {
+    width: 20px;
+    height: 20px;
+  }
+  .header .nav .menu-icon svg {
+    width: 30px;
+    height: 30px;
+  }
+}
 
 /* grid img */
 @media (max-width: 1024px) {
     .treatments .content-section {
       grid-template-columns: repeat(2, 1fr);
     }
-    /* .treatments .treatment-item:hover {
-      width: 380px;
-    } */
   }
   @media (max-width: 600px) {
     .treatments .content-section {
       grid-template-columns: 2fr;
     }
-    /* .treatments .treatment-item:hover {
-      width: 330px;
-    }
-     */
   }
   @media (max-width: 500px) {
     .treatments .content-section {
       grid-template-columns: 1fr;
     }
-    /* .treatments .treatment-item:hover {
-      width: 280px;
-    } */
   }
 
   /* footer */
@@ -408,6 +423,6 @@ opacity: 0;
     scale: 1.05;
   }
   50% {
-    opacity: 0.5;
+    opacity: 1;
   }
 }

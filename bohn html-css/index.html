@@ -22,19 +22,12 @@
 
             <!-- logo -->
             <img src="./assets/sinfondo-2-01.png" alt="logo" class="logo" data-aos="zoom-in-right" data-aos-duration="3000"/>
-            
-            <!-- hamburger menu in small screens-->
-            <div class="menu-icon">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
-                </svg> 
-            </div>  
 
             <!-- navbar -->
             <ul class="ul-nav">
                 <!-- ul inside li -->
                 <li class="treatments-nav">
-                    <a href='#'>Tratamientos<img class="arrow-icon" src="assets/flecha.png" alt="desplegar"> 
+                    <a href='#'>Tratamientos<img class="arrow-icon" src="./assets/flecha.png" alt="desplegar"> 
                     </a>
                     <ul class="treatments-list">
                         <li>
@@ -56,16 +49,16 @@
                 </li>
 
                 <!-- other items of navbar  -->
-                <li>
+                <li class="cards">
                     <a href='#card-section'>Gift Cards</a>
                 </li>
-                <li>
+                <li class="nutri">
                     <a href='#nutrition-section'>Nutrición</a>
                 </li>
 
                 <!-- another ul inside li -->
                 <li class="promos-convenios">
-                    <a href='#'>Promos | Convenios<img      class="arrow-icon" src="assets/flecha.png" alt="desplegar">
+                    <a href='#'>Promos | Convenios<img      class="arrow-icon" src="./assets/flecha.png" alt="desplegar">
                     </a>
                     <ul class="promos-list">
                         <!-- <li><a href=''>Convenios</a></li> -->
@@ -75,31 +68,48 @@
                 </li>
 
                 <!-- other items of navbar  -->               
-                <li>
+                <li class="terms">
                     <a href="./assets/Bohn Clinica Estetica TERMINOS Y CONDICIONES.pdf" target="_blank">Términos y Condiciones</a>
                 </li>
                 <!-- <li><a href=''>Agendá tu hora</a></li> -->
-                <li>
+                <li class="contact">
                     <a href='#contact-information'>Contacto</a>
                 </li>  
             </ul>
+
+            <!-- hamburger menu in small screens-->
+            <div class="menu-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+                </svg> 
+            </div>  
         </nav>
 
+        <!-- iconos del header -->
         <div class="header-icons">
-            <div class="row">
-                <img src="./assets/icons/whatsapp.png" alt="logo ws"><a href="https://wa.me/56932066518" target="_blank"></a>
-            </div>
-            <div class="row">
-                <img src="./assets/icons/instagram.png" alt="logo-ig"><a href="https://www.instagram.com/bohn_clinicaestetica/" target="_blank"></a>
-            </div>
-            <div class="row">
-                <img src="./assets/icons/facebook.png" alt="logo-fc"><a href="http://Facebook.com/bohnclinicaestetica" target="_blank"></a> 
-            </div>
+            <a href="https://wa.me/56932066518" target="_blank">
+                <img src="./assets/icons/whatsapp.png" alt="logo ws">
+            </a>
+           <a href="https://www.instagram.com/bohn_clinicaestetica/" target="_blank"> 
+                <img src="./assets/icons/instagram.png" alt="logo-ig">
+            </a>
+            <a href="http://Facebook.com/bohnclinicaestetica" target="_blank">
+                <img src="./assets/icons/facebook.png" alt="logo-fc">
+            </a> 
         </div>
     </header>
 
-    <!-- gallery -->
-    <div class="gallery">
+    <!-- welcome -->
+    <div class="welcome-section">
+        <span class="clinic"> 
+            <p><b>¡Bienvenidos a Bohn Clínica Estética!</b>
+                Somos un equipo de profesionales apasionados que se especializan en ofrecer tratamientos estéticos y de relajación de alta calidad. Nuestra misión es brindar un enfoque personalizado para que cada paciente encuentre un espacio de bienestar único. Desde rejuvenecimiento facial hasta terapias de relajación, estamos comprometidos a ayudarte a realzar tu belleza interior y exterior. ¡Únete a nosotros en esta experiencia transformadora y descubre una versión más radiante de ti mismo!
+            </p>
+        </span>
+
+        <!-- gallery -->
+        <div class="gallery">
+        
         <div class="gallery-item gallery-item-1">
             <img src="./assets/gallery/g12.webp" alt="bohn" class="gallery-image"/>
         </div>
@@ -122,9 +132,9 @@
             <img src="./assets/gallery/g10.webp" alt="aparotología 3" class="gallery-image"/>
         </div>
     </div>
-
+    </div>
     <!-- TREATMETS -->
-    <div class="treatments">
+    <main class="treatments">
         <!-- titulo -->
 
         <!-- <div class="title">
@@ -353,7 +363,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </main>
 
 
     <!-- FOOTER -->
@@ -410,13 +420,16 @@
         document.addEventListener('DOMContentLoaded', function() {
             const treatmentsMenu = document.querySelector('.treatments-nav');
             const treatmentsSubMenu = document.querySelector('.treatments-list'); 
+            
             treatmentsMenu.addEventListener('click', function(event){
+                event.preventDefault();
                 treatmentsSubMenu.classList.toggle('show');
             });
             
             const promosMenu = document.querySelector('.promos-convenios');
             const promosSubMenu = document.querySelector('.promos-list');
             promosMenu.addEventListener('click', function(event){
+                event.preventDefault();
                 promosSubMenu.classList.toggle('show');
             });
 
@@ -468,16 +481,25 @@
         document.addEventListener('scroll', function() {
             const header = document.querySelector('.header');
             const logo = document.querySelector ('.logo');
-            const menuIcon = document.querySelector ('.menu-icon')
+            // const menuUl = document.querySelector ('.ul-nav');
+            // const treatList = document.querySelector ('.treatments-nav')
+            // const promList = document.querySelector ('.promos-convenios')
             const scrollPosition = window.pageYOffset;
 
             if (scrollPosition > 0) {
-                header.style.height = '100px';
-                logo.style.height = '100px';
+                header.style.height = '80px';
+                logo.style.height = '80px';
+                // treatList.style.marginLeft = '90px';
+                // promList.style.marginLeft = '90px'; 
+                // menuUl.style.marginLeft = '90px';
+                
             } else {
                 // console.log ('volver al tamaño original');
-                header.style.height = '190px';
-                logo.style.height = '190px';
+                header.style.height = '160px';
+                logo.style.height = '160px';
+                // treatList.style.marginLeft = '170px';
+                // promList.style.marginLeft = '170px'; ver
+                // menuUl.style.marginLeft = '170px';
                 // menuIcon.style.align = 'center';
             }
         });
