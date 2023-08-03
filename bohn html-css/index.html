@@ -26,8 +26,7 @@
             <!-- navbar -->
             <ul class="ul-nav">
                 <!-- ul inside li -->
-                <li class="treatments-nav">
-                    <a href='#'>Tratamientos<img class="arrow-icon" src="./assets/flecha.png" alt="desplegar"> 
+                <li class="treatments-nav"><span>Tratamientos</span><img class="arrow-icon" src="./assets/flecha.png" alt="desplegar"> 
                     </a>
                     <ul class="treatments-list">
                         <li>
@@ -57,13 +56,13 @@
                 </li>
 
                 <!-- another ul inside li -->
-                <li class="promos-convenios">
-                    <a href='#'>Promos | Convenios<img      class="arrow-icon" src="./assets/flecha.png" alt="desplegar">
+                <li class="promos-convenios"><span>Promos | Convenios</span><img class="arrow-icon" src="./assets/flecha.png" alt="desplegar">
                     </a>
                     <ul class="promos-list">
                         <!-- <li><a href=''>Convenios</a></li> -->
                         <li>
-                            <a href='#promos-section'>Promos</a></li>
+                            <a href='#promos-section'>Promos</a>
+                        </li>
                     </ul>
                 </li>
 
@@ -101,37 +100,42 @@
 
     <!-- welcome -->
     <div class="welcome-section">
-        <span class="clinic"> 
-            <p><b>¡Bienvenidos a Bohn Clínica Estética!</b>
-                Somos un equipo de profesionales apasionados que se especializan en ofrecer tratamientos estéticos y de relajación de alta calidad. Nuestra misión es brindar un enfoque personalizado para que cada paciente encuentre un espacio de bienestar único. Desde rejuvenecimiento facial hasta terapias de relajación, estamos comprometidos a ayudarte a realzar tu belleza interior y exterior. ¡Únete a nosotros en esta experiencia transformadora y descubre una versión más radiante de ti mismo!
+        <span class="clinic"> <b data-aos="zoom-in-up" data-aos-duration="3000">¡Bienvenidos a Bohn Clínica Estética!</b>
+            <p class="welcome-text">
+                Somos un equipo de profesionales apasionados  especializados en ofrecer tratamientos personalizados estéticos y de relajación de alta calidad. Nuestra misión es brindar un enfoque personalizado para que cada paciente encuentre un espacio de bienestar único. Contando con las mejores tecnologías, estamos comprometidos a ayudarte a realzar tu belleza interior y exterior. 
             </p>
+            <p>
+                ¡Únete a nosotros en esta experiencia transformadora y descubre una versión más radiante de ti mismo!
+            </p>
+            
         </span>
 
         <!-- gallery -->
-        <div class="gallery">
-        
-        <div class="gallery-item gallery-item-1">
-            <img src="./assets/gallery/g12.webp" alt="bohn" class="gallery-image"/>
+        <div class="gallery-container">
+            <div class="gallery">
+                <div class="gallery-item gallery-item-1">
+                    <img src="./assets/gallery/g12.webp" alt="bohn" class="gallery-image"/>
+                </div>
+                <div class="gallery-item gallery-item-2">
+                    <img src="./assets/gallery/g13.webp" alt="recepción" class="gallery-image"/>
+                </div>
+                <div class="gallery-item gallery-item-3">
+                    <img src="./assets/gallery/g14.webp" alt="consultorio 1" class="gallery-image"/>
+                </div>
+                <div class="gallery-item gallery-item-4">
+                    <img src="./assets/gallery/g7.webp" alt="consultorio 2" class="gallery-image"/>
+                </div>
+                <div class="gallery-item gallery-item-5">
+                    <img src="./assets/gallery/g1.webp" alt="aparotología" class="gallery-image"/>
+                </div>
+                <div class="gallery-item gallery-item-6">
+                    <img src="./assets/gallery/g8.webp" alt="aparotología 2" class="gallery-image"/>
+                </div>
+                <div class="gallery-item gallery-item-7">
+                    <img src="./assets/gallery/g10.webp" alt="aparotología 3" class="gallery-image"/>
+                </div>
+            </div>
         </div>
-        <div class="gallery-item gallery-item-2">
-            <img src="./assets/gallery/g13.webp" alt="recepción" class="gallery-image"/>
-        </div>
-        <div class="gallery-item gallery-item-3">
-            <img src="./assets/gallery/g14.webp" alt="consultorio 1" class="gallery-image"/>
-        </div>
-        <div class="gallery-item gallery-item-4">
-            <img src="./assets/gallery/g7.webp" alt="consultorio 2" class="gallery-image"/>
-        </div>
-        <div class="gallery-item gallery-item-5">
-            <img src="./assets/gallery/g7.webp" alt="aparotología" class="gallery-image"/>
-        </div>
-        <div class="gallery-item gallery-item-6">
-            <img src="./assets/gallery/g8.webp" alt="aparotología 2" class="gallery-image"/>
-        </div>
-        <div class="gallery-item gallery-item-7">
-            <img src="./assets/gallery/g10.webp" alt="aparotología 3" class="gallery-image"/>
-        </div>
-    </div>
     </div>
     <!-- TREATMETS -->
     <main class="treatments">
@@ -520,27 +524,58 @@
         </div>
     </section>
 
+    <!-- reload page = scroll in 0 -->
+    <script>
+        window.addEventListener('beforeunload', function () {
+        window.scrollTo(0, 0);
+    });
+    </script>
 
     <!-- js para desplegar submenus -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+            // nuevo
+            const links = document.querySelectorAll('.ul-nav a[href^="#"]');
+
             const treatmentsMenu = document.querySelector('.treatments-nav');
             const treatmentsSubMenu = document.querySelector('.treatments-list'); 
+
+            links.forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                const targetId = link.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                if (targetElement) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const elementPosition = targetElement.getBoundingClientRect().top;
+                    const offsetPosition = elementPosition - headerHeight;
+
+                    window.scrollBy({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
             
             treatmentsMenu.addEventListener('click', function(event){
-                // event.preventDefault();
+                if (event.target.tagName !== 'A') {           
+                    event.preventDefault();
+                }
                 treatmentsSubMenu.classList.toggle('show');
-                
             });
             
             const promosMenu = document.querySelector('.promos-convenios');
             const promosSubMenu = document.querySelector('.promos-list');
 
-            promosMenu.addEventListener('click', function(event){                
-                // event.preventDefault();
-                promosSubMenu.classList.toggle('show');
+            promosMenu.addEventListener('click', function(event){     
+                if (event.target.tagName !== 'A') {           
+                    event.preventDefault();
+                }
                 
-                // event.stopPropagation();
+                promosSubMenu.classList.toggle('show');
             });
 
             document.addEventListener('click', function(event){
@@ -606,38 +641,33 @@
         });
     </script>
     
-    <!-- reload page = scroll in 0 -->
-    <script>
-        window.addEventListener('load', function() {
-            // Scroll hacia arriba
-            window.scrollTo(0, 0);
-        });
-    </script>
+    
+    
 
-    <!-- JavaScript para scroll suave -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const links = document.querySelectorAll('.ul-nav a[href^="#"]');
+    // <!-- JavaScript para scroll suave -->
+    // <!-- <script>
+    //     document.addEventListener('DOMContentLoaded', function() {
+    //         const links = document.querySelectorAll('.ul-nav a[href^="#"]');
 
-            links.forEach(link => {
-                link.addEventListener('click', function(event) {
-                event.preventDefault();
-                const targetId = link.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
+    //         links.forEach(link => {
+    //             link.addEventListener('click', function(event) {
+    //             event.preventDefault();
+    //             const targetId = link.getAttribute('href').substring(1);
+    //             const targetElement = document.getElementById(targetId);
                 
-                if (targetElement) {
-                    const headerHeight = document.querySelector('.header').offsetHeight;
-                    const elementPosition = targetElement.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition - headerHeight;
+    //             if (targetElement) {
+    //                 const headerHeight = document.querySelector('.header').offsetHeight;
+    //                 const elementPosition = targetElement.getBoundingClientRect().top;
+    //                 const offsetPosition = elementPosition - headerHeight;
 
-                        window.scrollBy({
-                         top: offsetPosition,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-        });
-    </script>
+    //                     window.scrollBy({
+    //                      top: offsetPosition,
+    //                         behavior: 'smooth'
+    //                     });
+    //                 }
+    //             });
+    //         });
+    //     });
+    // </script> -->
 </body>
 </html>

@@ -31,10 +31,6 @@
     font-size: 16px;
     transition: min-height 0.5s ease; 
 }
-/* .header .scroll {
-  height: 20px;
-  padding: 20px 0;
-} */
 
 /* logo */
 .header .logo { 
@@ -67,13 +63,13 @@
 .nav ul.treatments-list.show, ul.promos-list.show {
   padding: 10px 0px 0px 0px;
 }
-.nav a, .ul a {
+.nav a, .ul a, .treatments-nav, .promos-convenios {
   color: #c7c7c4;
   text-decoration: none;
 }
-.nav a:hover {
+.nav a:hover, .ul a:hover, .treatments-nav span:hover, .promos-convenios span:hover {
   font-size: 18px;
-  text-shadow: 2px 2px 4px rgba(136, 120, 75, 0.5);
+  text-shadow: 2px 2px 4px #c7c7c4;
 }
 .header .nav .treatments-nav, .promos-convenios, .cards, .nutri, .terms, .contact  {
   position: relative;
@@ -81,7 +77,7 @@
 .header .nav .ul-nav .treatments-nav .treatments-list, .promos-convenios .promos-list {
   display: none;
   position: absolute;
-  top: calc (100% + 5px);
+  top: 100%;
   left: 0;
   border-radius: 5px;
 }
@@ -111,15 +107,12 @@
 }
 
 /* header-icons */
-div.header-icons {
+.header-icons {
   display: flex;
-  justify-content: flex-end;
-  margin-right: 15px;
   cursor: pointer; 
 }
-div.header-icons img {
-  display: inline-flex;
-  margin-left: 10px;
+.header-icons img {
+  margin-left: 20px;
   vertical-align: middle;
 }
 
@@ -127,32 +120,51 @@ div.header-icons img {
 .welcome-section {
   margin-top: 180px;
   margin-left: 10px;
-  /* padding: 20px; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 10px;
+  grid-gap: 30px;
   align-items: center;  
 }
-.welcome-section .clinic, .gallery {
-  width: 90%;
+.welcome-section .clinic {
+  width: 100%;
+  height: 100%;
+  background-color: #8e99a6;
+  border-radius: 20px;
+  padding: 10px;
+  opacity: 0.8;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  font-size: 15px;
+}
+.welcome-section .clinic b {
+  color: #191919;
+  font-size: 20px;
+}
+.welcome-section .clinic .welcome-text {
+  background-color: #c7c7c4;
+  border-radius: 20px;
+  padding: 5px;
+  text-align: center;
+  color: #191919; 
 }
 
 /* parrafo */
 .welcome-section .clinic {
   font-family: 'Poppins';
-  color: #af994d;
   font-size: 18px;
 }
 /* carrusel gallery */
-.welcome-section .gallery {
+.welcome-section .gallery-container  {
   display: flex;
   position: relative;
   justify-content: center;
   overflow: hidden;
-  height: 350px;
-  width: 100%;
-  border-radius: 35px;
-  align-items: center;
+  height: 100%;
+  /* width: 90%; */
+  border-radius: 20px;
+  background-color: #8e99a6;
+  border: solid 10px #8e99a6 ;
+  opacity: 0.8;
 }
 .gallery-item {
   position: absolute;
@@ -160,7 +172,6 @@ div.header-icons img {
   opacity: 0;
   animation: slide-show 10s infinite;
 }
-
 .gallery-item-2{
   animation-delay: 4s;
 }
@@ -183,6 +194,7 @@ div.header-icons img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  align-items: flex-start;
 }
 
   /* titulos y secciones */
@@ -229,21 +241,21 @@ div.header-icons img {
 .treatments .treatment-buttons {
   background-color: #af994d;
   position: absolute;
-  bottom: -47px;
+  bottom: -35px;
   left: 0;
   right: 0;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
   transition: background-color 1s ease;
   border-radius: 10px;
 }
 .treatments .treatment-buttons-two {
   position: absolute;
-  bottom: -99px;
+  bottom: -73px;
   left: 0;
   right: 0;
   background-color: #af994d;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
   transition: background-color 1s ease;
   border-radius: 10px;
@@ -253,13 +265,12 @@ div.header-icons img {
   text-decoration: none;
   font-weight: 600;
   font-family: 'Poppins';
-  font-size: 20px;
+  font-size: 18px;
 }
 .treatments .treatment-buttons:hover, .treatment-buttons-two:hover {
   background-color: #c7c7c4;
 }
 
-  
 /* footer */
 .contact-information{
     font-family: 'Poppins';
@@ -335,8 +346,13 @@ div.header-icons img {
     margin: 2px;
     background-color: #af994d;    
   }
-  .header .nav .treatments-nav.show .treatments-list {
+  .header .nav .treatments-nav.show .treatments-list, .promos-convenios .promos-list.show {
     display: block;
+  }
+  .treatments-nav .treatments-list, .promos-convenios .promos-list {
+    z-index: 999;
+    background-color: #c7c7c4; 
+    border-radius: 10px;
   }
   .header .nav .menu-icon {
     display: flex;
@@ -353,8 +369,8 @@ div.header-icons img {
     width: 40px;
   }
   .header .nav a:hover {
-    font-size: 19px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    text-shadow: 2px 2px 4px #c7c7c4;
   } 
   .treatments .treatment-buttons a, .treatment-buttons-two a {
     font-size: medium;
@@ -384,25 +400,35 @@ div.header-icons img {
 
 /* grid img */
 @media (max-width: 1024px) {
-    .treatments .content-section {
-      grid-template-columns: repeat(2, 1fr);
-    }
+  .treatments .content-section {
+    grid-template-columns: repeat(2, 1fr);
   }
-  @media (max-width: 600px) {
-    .treatments .content-section {
+}
+@media (max-width: 600px) {   .treatments .content-section {
       grid-template-columns: 2fr;
     }
-  }
-  @media (max-width: 500px) {
-    .treatments .content-section {
+}
+@media (max-width: 500px) {   .treatments .content-section {
       grid-template-columns: 1fr;
     }
-  }
+}
 
   /* footer */
-  @media screen and (max-width:800px){
-    .contact-information .content-section .row{
-      display: block;
+@media screen and (max-width:800px){ .contact-information .content-section .row{
+    display: block;
+    }
+}
+ /* welcome-section  */
+@media screen and (max-width:700px){
+.welcome-section .gallery-container {   
+  display: none;
+}
+.welcome-section {   
+  /* display:contents; */
+  grid-template-columns: none;
+  justify-content: center;
+  align-items: center;
+  width: 93%;
   }
 }
 
