@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- seguridad  -->
+    <!-- seguridad -->
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'trusted-scripts.example.com'; style-src 'self' 'trusted-styles.example.com'; img-src 'self' data:; font-src 'self';"> -->
 
     <script src="https://kit.fontawesome.com/489360dac2.js" crossorigin="anonymous"></script>
@@ -30,7 +30,6 @@
             <ul class="ul-nav">
                 <!-- ul inside li -->
                 <li class="treatments-nav"><span>Tratamientos</span><img class="arrow-icon" src="./assets/flecha.png" alt="desplegar"> 
-                    </a>
                     <ul class="treatments-list">
                         <li>
                             <a href='#body-section'>Corporales</a>
@@ -38,8 +37,18 @@
                         <li>
                             <a href='#facial-section'>Faciales</a>
                         </li>
-                        <li>
-                            <a href='#depilation-section'>Depilación</a>
+                        <li class="depilation"><span>Depilación</span><img class="arrow-icon" src="./assets/flecha.png" alt="desplegar">
+                            <ul class='depilation-list'>
+                                <li>
+                                    <a href='#depilation-fem'>Femenino</a>
+                                </li>
+                                <li>
+                                    <a href='#depilation-zone'>Masculino</a>
+                                </li>
+                                <li>
+                                    <a href='#depilation-masc'>Zonas</a>
+                                </li>
+                            </ul>
                         </li>
                         <li>
                             <a href='#massage-section'>Masajes</a>
@@ -57,16 +66,8 @@
                 <li class="nutri">
                     <a href='#nutrition-section'>Nutrición</a>
                 </li>
-
-                <!-- another ul inside li -->
-                <li class="promos-convenios"><span>Promos | Convenios</span><img class="arrow-icon" src="./assets/flecha.png" alt="desplegar">
-                    </a>
-                    <ul class="promos-list">
-                        <!-- <li><a href=''>Convenios</a></li> -->
-                        <li>
-                            <a href='#promos-section'>Promos</a>
-                        </li>
-                    </ul>
+                <li class="promos">
+                    <a href='#promos-section'>Promociones</a>
                 </li>
 
                 <!-- other items of navbar  -->               
@@ -238,7 +239,8 @@
             </span>
         </div>
             <!-- depilacion -->
-        <div class="content-section" > 
+        <div class="content-section" id="depilation-fem"> 
+            <!-- depilacion femenina -->
             <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
                 <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1688259686/bohn%20clinica%20estetica1/imgs%20webp/depi-laser-pack-base_webp_anibc0.webp" alt="Depilacion Laser Pack Base">
                 <div class="treatment-buttons">
@@ -281,7 +283,41 @@
                     <a href="" target="_blank">Comprar</a>
                 </div>
             </div>
+        </div>
 
+            
+
+            <!-- depilacion masc -->
+        <div class="content-section" id="depilation-masc"> 
+            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
+                <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1691012248/bohn%20clinica%20estetica1/imgs%20webp/pack-para-ellos_ircr4v.webp" alt="Depilacion Laser Pack Base MASC">
+                <div class="treatment-buttons">
+                    <a href="" target="_blank">Comprar</a>
+                </div>
+            </div>
+            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
+                <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1691012247/bohn%20clinica%20estetica1/imgs%20webp/pack-para-ellos-plus_kmrfhb.webp" alt="Depilacion Laser Pack Plus MASC">
+                <div class="treatment-buttons">
+                    <a href="" target="_blank">Comprar</a>
+                </div>
+            </div>
+            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
+                <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1691012248/bohn%20clinica%20estetica1/imgs%20webp/tripack_sppvbh.webp" alt="Depilacion Laser TRIPACK MASC">
+                <div class="treatment-buttons">
+                    <a href="" target="_blank">Comprar</a>
+                </div>
+            </div>
+            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
+                <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1691012249/bohn%20clinica%20estetica1/imgs%20webp/barba-y-cuello_f0l8g7.webp" alt="Depilacion Laser Barba y Cuello MASC">
+                <div class="treatment-buttons">
+                    <a href="" target="_blank">Comprar</a>
+                </div>
+            </div>
+            </div>
+        </div>
+
+        <!-- depilacion por zonas -->
+        <div class="content-section" id="depilation-zone"> 
             <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
                 <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1691012249/bohn%20clinica%20estetica1/imgs%20webp/2_ZONAS_suyp3n.webp" alt="Depilacion Laser 2 ZONAS">
                 <div class="treatment-buttons">
@@ -300,7 +336,6 @@
                     <a href="" target="_blank">Comprar</a>
                 </div>
             </div>
-
             <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
                 <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1691012244/bohn%20clinica%20estetica1/imgs%20webp/zona_xs_hlbv3r.webp" alt="Depilacion Laser XS">
                 <div class="treatment-buttons">
@@ -331,33 +366,8 @@
                     <a href="" target="_blank">Comprar</a>
                 </div>
             </div>
-            
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1691012248/bohn%20clinica%20estetica1/imgs%20webp/pack-para-ellos_ircr4v.webp" alt="Depilacion Laser Pack Base MASC">
-                <div class="treatment-buttons">
-                    <a href="" target="_blank">Comprar</a>
-                </div>
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1691012247/bohn%20clinica%20estetica1/imgs%20webp/pack-para-ellos-plus_kmrfhb.webp" alt="Depilacion Laser Pack Plus MASC">
-                <div class="treatment-buttons">
-                    <a href="" target="_blank">Comprar</a>
-                </div>
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1691012248/bohn%20clinica%20estetica1/imgs%20webp/tripack_sppvbh.webp" alt="Depilacion Laser TRIPACK MASC">
-                <div class="treatment-buttons">
-                    <a href="" target="_blank">Comprar</a>
-                </div>
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="https://res.cloudinary.com/dsbekpj9h/image/upload/v1691012249/bohn%20clinica%20estetica1/imgs%20webp/barba-y-cuello_f0l8g7.webp" alt="Depilacion Laser Barba y Cuello MASC">
-                <div class="treatment-buttons">
-                    <a href="" target="_blank">Comprar</a>
-                </div>
-            </div>
-            
         </div>
+    
         <!-- titulo -->
         <div class="title" id="nutrition-section">
             <span>
@@ -534,9 +544,31 @@
     });
     </script>
 
-    <!-- js para desplegar submenus -->
+    <!-- js para desplegar submenus y clicks -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
+
+            // hamburguer menu
+            const menuToggle = document.querySelector('.menu-icon');
+            const ulNav = document.querySelector('.ul-nav'); 
+
+            menuToggle.addEventListener('click', function (event){
+                event.stopPropagation();
+                ulNav.classList.toggle('show');
+            });
+
+            document.body.addEventListener('click', function(event) {
+            if (!event.target.closest('.menu-icon') && !event.target.closest('.ul-nav')) {
+                ulNav.classList.remove('show');
+                }
+            });
+        
+            // <!-- funcion para cerrar submenus -->
+            function closeSubmenus() {
+                treatmentsSubMenu.classList.remove('show');
+                ulNav.classList.remove('show');
+            }
+
             // nuevo
             const links = document.querySelectorAll('.ul-nav a[href^="#"]');
 
@@ -544,58 +576,48 @@
             const treatmentsSubMenu = document.querySelector('.treatments-list'); 
 
             links.forEach(link => {
-            link.addEventListener('click', function(event) {
-                event.preventDefault();
-                event.stopPropagation();
-                const targetId = link.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
+                link.addEventListener('click', function(event) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    closeSubmenus();
+                    const targetId = link.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                
 
-                if (targetElement) {
-                    const headerHeight = document.querySelector('.header').offsetHeight;
-                    const elementPosition = targetElement.getBoundingClientRect().top;
-                    const offsetPosition = elementPosition - headerHeight;
+                    if (targetElement) {
+                        const headerHeight = document.querySelector('.header').offsetHeight;
+                        const elementPosition = targetElement.getBoundingClientRect().top;
+                        const offsetPosition = elementPosition - headerHeight;
 
-                    window.scrollBy({
-                        top: offsetPosition,
-                        behavior: 'smooth'
-                    });
-                }
+                        window.scrollBy({
+                            top: offsetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+        // Agregar evento click a los elementos del submenú
+        treatmentsSubMenu.querySelectorAll('a').forEach (submenuLink => {
+            submenuLink.addEventListener('click', function() {
+            closeSubmenus(); 
             });
         });
             
-            treatmentsMenu.addEventListener('click', function(event){
-                if (event.target.tagName !== 'A') {           
-                    event.preventDefault();
-                }
-                treatmentsSubMenu.classList.toggle('show');
-            });
-            
-            const promosMenu = document.querySelector('.promos-convenios');
-            const promosSubMenu = document.querySelector('.promos-list');
+        treatmentsMenu.addEventListener('click', function(event){
+            if (event.target.tagName !== 'A') {           
+                event.preventDefault();
+            }
+            treatmentsSubMenu.classList.toggle('show');
+        });
 
-            promosMenu.addEventListener('click', function(event){     
-                if (event.target.tagName !== 'A') {           
-                    event.preventDefault();
-                }
-                
-                promosSubMenu.classList.toggle('show');
-            });
+        document.addEventListener('click', function(event){
+            const targetElement = event.target;
 
-            document.addEventListener('click', function(event){
-                const targetElement = event.target;
-
-                if(
-                    !targetElement.closest('.treatments-nav') &&
-                    !targetElement.closest('.treatments-list')
-                ) {
-                    treatmentsSubMenu.classList.remove('show');
-                }
-
-                if(
-                    !targetElement.closest('.promos-convenios') &&
-                    !targetElement.closest('.promos-list')
-                ) {
-                    promosSubMenu.classList.remove('show');
+            if(
+                !targetElement.closest('.treatments-nav') &&
+                !targetElement.closest('.treatments-list')) {
+                treatmentsSubMenu.classList.remove('show');
                 }
             });
         });
@@ -608,7 +630,7 @@
     </script>
 
     <!-- hamburger menu -->
-    <script>
+    <!-- <script>
         const menuToggle = document.querySelector('.menu-icon');
         const ulNav = document.querySelector('.ul-nav'); 
 
@@ -622,7 +644,7 @@
                 ulNav.classList.remove('show');
             }
         });
-    </script>
+    </script> -->
 
     <!--  header mas pequeño al hacer scroll-->
     <script>

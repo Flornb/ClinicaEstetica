@@ -48,58 +48,51 @@
   /* display:flex; */
   align-items: center;
 }
-.header .nav .ul-nav li, ul.treatments-list li, ul.promos-list li {
+.header .nav .ul-nav li, ul.treatments-list li {
   border-radius: 5px;
   padding: 10px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
   margin: 5px;
   list-style: none;
 }
-.header .nav ul.treatments-list li, ul.promos-list li {
+.header .nav ul.treatments-list li {
   background-color: #af994d;
  }
 .nav ul.ul-nav {
   padding: 5px;
 }
-.nav ul.treatments-list.show, ul.promos-list.show {
+.nav ul.treatments-list.show {
   padding: 10px 0px 0px 0px;
 }
-.nav a, .ul a, .treatments-nav, .promos-convenios {
+.nav a, .ul a, .treatments-nav {
   color: #c7c7c4;
   text-decoration: none;
 }
-.nav a:hover, .ul a:hover, .treatments-nav span:hover, .promos-convenios span:hover {
+.nav a:hover, .ul a:hover, .treatments-nav span:hover {
   font-size: 18px;
   text-shadow: 2px 2px 4px #c7c7c4;
 }
-.header .nav .treatments-nav, .promos-convenios, .cards, .nutri, .terms, .contact  {
+.header .nav .treatments-nav, .promos, .cards, .nutri, .terms, .contact  {
   position: relative;
 }
-.header .nav .ul-nav .treatments-nav .treatments-list, .promos-convenios .promos-list {
+.header .nav .ul-nav .treatments-nav .treatments-list {
   display: none;
   position: absolute;
   top: 100%;
   left: 0;
   border-radius: 5px;
 }
-.header .nav .treatments-nav .treatments-list.show, .promos-convenios .promos-list.show {
+.header .nav .treatments-nav .treatments-list.show {
   display: block;
 }
-.header .nav .treatments-nav .treatments-list a, .promos-convenios .promos-list a {
+.header .nav .treatments-nav .treatments-list a {
   display: block;
   padding: 2px;
   background-color: #af994d; 
 }
 
 /* flecha desplegable para menu */
-.header .nav .treatments-nav a .arrow-icon {
-  width: 13px;
-  height: 13px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin-left: 5px;
-}
-.header .nav .promos-convenios a .arrow-icon {
+.header .nav .arrow-icon   {
   width: 13px;
   height: 13px;
   background-size: contain;
@@ -124,7 +117,7 @@
 /* WELCOME SECTION */
 .welcome-section {
   margin-top: 180px;
-  padding: 20px;
+  padding: 10px;
   margin-left: 10px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -329,7 +322,7 @@
 @media screen and (max-width: 1200px) { 
   .header {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: center;
   }
   .header .logo {
@@ -347,18 +340,18 @@
   .header .nav .ul-nav.show {
     display: flex;
   }
-  .header .nav .ul-nav .treatments-nav, .cards, .nutri, .promos-convenios, .terms, .contact {
+  .header .nav .ul-nav .treatments-nav, .cards, .nutri, .promos, .terms, .contact {
     position: relative;
     margin: 2px;
     background-color: #af994d;    
   }
-  .header .nav .treatments-nav.show .treatments-list, .promos-convenios .promos-list.show {
+  .header .nav .ul-nav .treatments-nav.show .treatments-list.show {
     display: block;
   }
-  .treatments-nav .treatments-list, .promos-convenios .promos-list {
+  .ul-nav .treatments-nav .treatments-list {
     z-index: 999;
     background-color: #c7c7c4; 
-    border-radius: 10px;
+    justify-content: center;
   }
   .header .nav .menu-icon {
     display: flex;
@@ -419,13 +412,15 @@
     height: 25px;
   }
 }
-@media (max-width: 500px) {   .treatments .content-section {
+@media (max-width: 500px) {   
+  .treatments .content-section {
       grid-template-columns: 1fr;
     }
 }
 
   /* footer */
-@media screen and (max-width:800px){ .contact-information .content-section .row{
+@media screen and (max-width:800px){ 
+  .contact-information .content-section .row{
     display: block;
     }
 }
