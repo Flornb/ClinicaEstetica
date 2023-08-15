@@ -128,14 +128,6 @@ body {
 .clear {
   clear: both;
 }
-/* img {
-  max-width: 100%;
-  border: 0px;
-} */
-/* ul,
-ol {
-  list-style: none;
-} */
 a {
   text-decoration: none;
   color: inherit;
@@ -172,6 +164,7 @@ a:hover {
 button {
   outline: none !important;
 }
+
 /* -------- title style ------- */
 .line-title {
   position: relative;
@@ -269,7 +262,6 @@ button {
   margin-top: -20px;
   position: relative;
   z-index: 5;
-  color: #af994d;
 }
 
   /* titulos y secciones */
@@ -457,6 +449,7 @@ button {
   }
   .title {
     margin: 40px 0px;
+    width: 98%;
   }
 
 }

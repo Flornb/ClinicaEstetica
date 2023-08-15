@@ -108,7 +108,7 @@
 
     <!-- welcome -->
     <section class="welcome-section">
-        <!-- gallery -->
+        <!-- gallery owl carousel-->
         <h2 class="line-title">Te contamos un poco sobre nosotros...</h2>
         <div class="owl-carousel custom-carousel owl-theme">
             <div class="item active" style="background-image: url(./assets/gallery/g12.webp);">
@@ -165,8 +165,9 @@
             </div>    
         </div> 
     </section>
+
     <!-- TREATMETS -->
-    <main class="treatments">
+    <main class="treatments" style="margin-top: -30px;">
         <!-- titulo -->
         <div class="title" id="body-section">
             <span>
@@ -676,24 +677,6 @@
             });
         });
     </script>
-    
-
-    <!-- hamburger menu -->
-    <!-- <script>
-        const menuToggle = document.querySelector('.menu-icon');
-        const ulNav = document.querySelector('.ul-nav'); 
-
-        menuToggle.addEventListener('click', function (event){
-            event.stopPropagation();
-            ulNav.classList.toggle('show');
-        });
-
-        document.body.addEventListener('click', function(event) {
-            if (!event.target.closest('.menu-icon') && !event.target.closest('.ul-nav')) {
-                ulNav.classList.remove('show');
-            }
-        });
-    </script> -->
 
     <!--  header mas pequeño al hacer scroll-->
     <script>
@@ -704,7 +687,7 @@
 
             if (scrollPosition > 0) {
                 header.style.height = '80px';
-                logo.style.height = '80px';
+                logo.style.height = '100px';
               
                 
             } else {
