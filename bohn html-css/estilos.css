@@ -305,7 +305,7 @@ button {
 
 /* buttons */
 .treatments .treatment-buttons {
-  background-color: #af994d;
+  background-color: #3f3b3b;
   position: absolute;
   bottom: -35px;
   left: 0;
@@ -320,7 +320,7 @@ button {
   bottom: -73px;
   left: 0;
   right: 0;
-  background-color: #af994d;
+  background-color: #3f3b3b;
   padding: 5px;
   text-align: center;
   transition: background-color 1s ease;
@@ -329,7 +329,7 @@ button {
 .treatments .treatment-buttons a, .treatment-buttons-two a {
   color: white;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 400;
   font-family: 'Poppins';
   font-size: 18px;
 }
