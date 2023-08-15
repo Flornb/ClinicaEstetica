@@ -1,3 +1,5 @@
+@charset "utf-8";
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;1,200;1,400&display=swap');
 
 .background-container {
@@ -18,7 +20,7 @@
 .header {
     background-image: linear-gradient(to bottom, rgba(107, 104, 93, 0.8), #8e99a6);
     width: 100%;
-    height: 160px;
+    height: 150px;
     display: flex;
     align-items: center;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
@@ -26,7 +28,7 @@
     flex-direction: row;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 999;
     padding: 1px;
     font-family: 'Poppins';
     font-size: 16px;
@@ -115,85 +117,158 @@
 }
 
 /* WELCOME SECTION */
-.welcome-section {
-  margin-top: 180px;
-  padding: 10px;
-  margin-left: 10px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 30px;
-  align-items: center;  
+/******* Common Element CSS Start ******/
+/* * {
+  margin: 0px;
+  padding: 0px;
+} */
+body {
+  font-family: "Poppins";
 }
-.welcome-section .clinic {
-  width: 100%;
-  height: 100%;
-  background-color: #8e99a6;
-  border-radius: 20px;
-  padding: 10px;
-  opacity: 0.8;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
-  text-align: center;
-  font-size: 15px;
+.clear {
+  clear: both;
 }
-.welcome-section .clinic b {
-  color: #191919;
+/* img {
+  max-width: 100%;
+  border: 0px;
+} */
+/* ul,
+ol {
+  list-style: none;
+} */
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+a:focus,
+a:active,
+a:visited,
+a:hover {
+  text-decoration: none;
+  outline: none;
+}
+a:hover {
+  color: #c7c7c4;
+}
+.line-title {
+  margin-bottom: 30px;
+  padding-bottom: 16px;
   font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  position: relative;
+  color: #4b3d0c;
+  text-shadow: 2px 2px 4px #c7c7c4;
 }
-.welcome-section .clinic .welcome-text {
-  background-color: #c7c7c4;
-  border-radius: 20px;
-  padding: 5px;
-  text-align: center;
-  color: #191919; 
+.card-title {
+  margin: 0 0 10px;
+  font-size: 23px;
+  line-height: 36px;
+  font-weight: 500;
+}
+button {
+  outline: none !important;
+}
+/* -------- title style ------- */
+.line-title {
+  position: relative;
+  width: 400px;
+}
+.line-title::before,
+.line-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 4px;
+  border-radius: 2px;
+}
+.line-title::before {
+  width: 100%;
+  background: #af994d;
+}
+.line-title::after {
+  width: 32px;
+  background: #c7c7c4;
 }
 
-/* parrafo */
-.welcome-section .clinic {
-  font-family: 'Poppins';
-  font-size: 18px;
+
+/******* Middle section CSS Start ******/
+/* -------- Landing page ------- */
+.welcome-section {
+  padding: 40px 20px;
+  margin-top: 120px;
 }
-/* carrusel gallery */
-.welcome-section .gallery-container  {
+.welcome-section .owl-stage {
+  margin: 15px 0;
   display: flex;
-  position: relative;
-  justify-content: center;
+  display: -webkit-flex;
+}
+.welcome-section .item {
+  margin: 0 15px 60px;
+  width: 350px;
+  height: 400px;
+  display: flex;
+  display: -webkit-flex;
+  align-items: flex-end;
+  -webkit-align-items: flex-end;
+  background: #af994d no-repeat center center / cover;
+  border-radius: 16px;
   overflow: hidden;
-  height: 100%;
-  /* width: 90%; */
-  border-radius: 20px;
-  background-color: #8e99a6;
-  border: solid 10px #8e99a6 ;
-  opacity: 0.8;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  cursor: pointer;
 }
-.gallery-item {
+.welcome-section .item.active {
+  width: 450px;
+  box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 12px 40px 40px rgba(0, 0, 0, 0.25);
+}
+.welcome-section .item:after {
+  content: "";
+  display: block;
   position: absolute;
-  inset: 0;
-  opacity: 0;
-  animation: slide-show 10s infinite;
-}
-.gallery-item-2{
-  animation-delay: 4s;
-}
-.gallery-item-3{
-  animation-delay: 8s;
-}
-.gallery-item-4{
-  animation-delay: 12s;
-}
-.gallery-item-5{
-  animation-delay: 16s;
-}
-.gallery-item-6{
-  animation-delay: 20s;
-}
-.gallery-item-7{
-  animation-delay: 24s;
-}
-.gallery-image {
-  width: 100%;
   height: 100%;
-  object-fit: cover;
-  align-items: flex-start;
+  width: 100%;
+  left: 0;
+  top: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+}
+.welcome-section .item-desc {
+  padding: 0 24px 12px;
+  color: #c7c7c4;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transform: translateY(calc(100% - 54px));
+  -webkit-transform: translateY(calc(100% - 54px));
+  transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+}
+.welcome-section .item.active .item-desc {
+  transform: none;
+  -webkit-transform: none;
+}
+.welcome-section .item-desc .card-text {
+  opacity: 0;
+  -webkit-transform: translateY(32px);
+  transform: translateY(32px);
+  transition: all 0.4s ease-in-out 0.2s;
+  -webkit-transition: all 0.4s ease-in-out 0.2s;
+}
+.welcome-section .item.active .item-desc .card-text {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+  transform: translateY(0);
+}
+.welcome-section .owl-theme .custom-carousel .owl-dots {
+  margin-top: -20px;
+  position: relative;
+  z-index: 5;
 }
 
   /* titulos y secciones */
@@ -208,7 +283,6 @@
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
 }
-
 
 /* body - container treatments */
 .treatments {
@@ -406,6 +480,7 @@
 @media (max-width: 600px) {
   .treatments .content-section {
       grid-template-columns: 2fr;
+      width: 100%;
   }
   .header-icons img {
     width: 25px;
@@ -424,19 +499,6 @@
     display: block;
     }
 }
- /* welcome-section  */
-@media screen and (max-width:700px){
-.welcome-section .gallery-container {   
-  display: none;
-}
-.welcome-section {   
-  /* display:contents; */
-  grid-template-columns: none;
-  justify-content: center;
-  align-items: center;
-  width: 93%;
-  }
-}
 
 /* animacion de gallery */
 @keyframes slide-show {
@@ -452,5 +514,99 @@ opacity: 0;
   }
   50% {
     opacity: 1;
+  }
+}
+
+/***** responsive Carousel ******/
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .line-title {
+    margin-bottom: 32px;
+  }
+  .card-title {
+    margin: 0 0 8px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  /* -------- Landing page ------- */
+  .welcome-section {
+    padding: 50px 30px;
+  }
+  .welcome-section .item {
+    margin: 0 12px 60px;
+    width: 260px;
+    height: 360px;
+  }
+  .welcome-section .item.active {
+    width: 400px;
+  }
+  .welcome-section .item-desc {
+    transform: translateY(calc(100% - 46px));
+    -webkit-transform: translateY(calc(100% - 46px));
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .line-title {
+    margin-bottom: 32px;
+    width: 330px;
+  }
+  .card-text {
+    margin: 0 0 8px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  /* -------- Landing page ------- */
+  .welcome-section {
+    padding: 50px 30px 40px;
+  }
+  .welcome-section .item {
+    margin: 0 12px 60px;
+    width: 240px;
+    height: 330px;
+  }
+  .welcome-section .item.active {
+    width: 360px;
+  }
+  .welcome-section .item-desc {
+    transform: translateY(calc(100% - 42px));
+    -webkit-transform: translateY(calc(100% - 42px));
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 14px;
+  }
+  .line-title {
+    margin-bottom: 20px;
+    width: 250px;
+  }
+  .card-title {
+    margin: 0 0 8px;
+    font-size: 19px;
+    line-height: 24px;
+  }
+
+  /* -------- Landing page ------- */
+  .welcome-section {
+    padding: 30px 15px 20px;
+  }
+  .welcome-section .item {
+    margin: 0 10px 40px;
+    width: 200px;
+    height: 280px;
+  }
+  .welcome-section .item.active {
+    width: 270px;
+    box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 6px 10px 10px rgba(0, 0, 0, 0.25);
+  }
+  .welcome-section .item-desc {
+    padding: 0 14px 5px;
+    transform: translateY(calc(100% - 42px));
+    -webkit-transform: translateY(calc(100% - 42px));
   }
 }

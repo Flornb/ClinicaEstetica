@@ -8,6 +8,10 @@
     <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'trusted-scripts.example.com'; style-src 'self' 'trusted-styles.example.com'; img-src 'self' data:; font-src 'self';"> -->
 
     <script src="https://kit.fontawesome.com/489360dac2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;1,200;1,400&display=swap" rel="stylesheet">
@@ -103,57 +107,66 @@
     </header>
 
     <!-- welcome -->
-    <div class="welcome-section">
-        <span class="clinic"> <b data-aos="zoom-in-up" data-aos-duration="3000">¡Bienvenidos a Bohn Clínica Estética!</b>
-            <p class="welcome-text">
-                Somos un equipo de profesionales apasionados  especializados en ofrecer tratamientos personalizados estéticos y de relajación de alta calidad. Nuestra misión es brindar un enfoque personalizado para que cada paciente encuentre un espacio de bienestar único. Contando con las mejores tecnologías, estamos comprometidos a ayudarte a realzar tu belleza interior y exterior. 
-            </p>
-            <p>
-                ¡Únete a nosotros en esta experiencia transformadora y descubre una versión más radiante de ti mismo!
-            </p>
-            
-        </span>
-
+    <section class="welcome-section">
         <!-- gallery -->
-        <div class="gallery-container">
-            <div class="gallery">
-                <div class="gallery-item gallery-item-1">
-                    <img src="./assets/gallery/g12.webp" alt="bohn" class="gallery-image"/>
-                </div>
-                <div class="gallery-item gallery-item-2">
-                    <img src="./assets/gallery/g13.webp" alt="recepción" class="gallery-image"/>
-                </div>
-                <div class="gallery-item gallery-item-3">
-                    <img src="./assets/gallery/g14.webp" alt="consultorio 1" class="gallery-image"/>
-                </div>
-                <div class="gallery-item gallery-item-4">
-                    <img src="./assets/gallery/g7.webp" alt="consultorio 2" class="gallery-image"/>
-                </div>
-                <div class="gallery-item gallery-item-5">
-                    <img src="./assets/gallery/g1.webp" alt="aparotología" class="gallery-image"/>
-                </div>
-                <div class="gallery-item gallery-item-6">
-                    <img src="./assets/gallery/g8.webp" alt="aparotología 2" class="gallery-image"/>
-                </div>
-                <div class="gallery-item gallery-item-7">
-                    <img src="./assets/gallery/g10.webp" alt="aparotología 3" class="gallery-image"/>
+        <h2 class="line-title">Un poco sobre nosotros</h2>
+        <div class="owl-carousel custom-carousel owl-theme">
+            <div class="item active" style="background-image: url(./assets/gallery/g12.webp);">
+                <div class="item-desc">
+                    <h3 class="card-title">Bienvenidos</h3>
+                    <p>Somos Bohn Clínica Estética. Descubre un mundo de belleza, bienestar y cuidado personal en nuestro espacio pensado especialmente para ti.</p>
                 </div>
             </div>
-        </div>
-    </div>
+            <div class="item" style="background-image: url(./assets/gallery/g13.webp);">
+                <div class="item-desc">
+                    <h3 class="card-title">Hola!</h3>
+                    <p>Mi nombre es Paula, y junto con nuestro equipo de especialistas te ayudaremos a encontrar tu mejor versión.</p>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(./assets/gallery/g8.webp);">
+                <div class="item-desc">
+                    <h3 class="card-title">Tecnologías</h3>
+                    <p class="card-text"> En Bohn Clínica Estética encontrarás tecnología de vanguardia y tratamientos líderes para realzar tu belleza.</p>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(./assets/gallery/g10.webp);">
+                <div class="item-desc">
+                    <h3 class="card-title">Nuestros consultorios</h3>
+                    <p>Equipados con la mejor tecnología, ambientados para hacer única tu experiencia.</p>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(./assets/gallery/g14.webp);">
+                <div class="item-desc">
+                    <h3 class="card-title">Confort</h3>
+                    <p class="card-text"> La comodidad es parte de tu experiencia. Descubre un espacio diseñado para tu máximo confort durante tus tratamientos.</p>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(./assets/gallery/g16.webp);">
+                <div class="item-desc">
+                    <h3 class="card-title">Pensado para ti</h3>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(./assets/gallery/g7.webp);">
+                <div class="item-desc">
+                    <h3 class="card-title">Vistas increibles</h3>
+                    <p>Disfruta de una excelente vista mientras te relajas.</p>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(./assets/gallery/g1.webp);">
+                <div class="item-desc">
+                    <h3 class="card-title">Un hermoso otoño</h3>
+                </div>
+            </div>
+            <div class="item" style="background-image: url();">
+                <div class="item-desc">
+                    <h3 class="card-title">¡Compartamos un café!</h3>
+                    <p class="card-text"> Disfruta tu tratamientos y relájate en nuestro acogedor rincón de café y té. Tu bienestar es nuestra prioridad.</p>
+                </div>
+            </div>    
+        </div> 
+    </section>
     <!-- TREATMETS -->
     <main class="treatments">
-        <!-- titulo -->
-
-        <!-- <div class="title">
-            <span>
-               PROMOS Y NOVEDADES
-            </span>
-        </div> -->
-        <!-- novedades -->
-        <!-- <div class="content-section">   
-        </div> -->
-
         <!-- titulo -->
         <div class="title" id="body-section">
             <span>
@@ -647,6 +660,23 @@
     <script>
         AOS.init();
     </script>
+    <!-- owl carousel -->
+    
+    <!-- carousel -->
+    <script>
+        $(".custom-carousel").owlCarousel({
+        autoWidth: true,
+        loop: true,
+        items: 4,
+        });
+        $(document).ready(function () {
+            $(".custom-carousel .item").click(function () {
+                $(".custom-carousel .item").not($(this)).removeClass("active");
+                $(this).toggleClass("active");
+            });
+        });
+    </script>
+    
 
     <!-- hamburger menu -->
     <!-- <script>
@@ -684,34 +714,5 @@
             }
         });
     </script>
-    
-    
-    
-
-    // <!-- JavaScript para scroll suave -->
-    // <!-- <script>
-    //     document.addEventListener('DOMContentLoaded', function() {
-    //         const links = document.querySelectorAll('.ul-nav a[href^="#"]');
-
-    //         links.forEach(link => {
-    //             link.addEventListener('click', function(event) {
-    //             event.preventDefault();
-    //             const targetId = link.getAttribute('href').substring(1);
-    //             const targetElement = document.getElementById(targetId);
-                
-    //             if (targetElement) {
-    //                 const headerHeight = document.querySelector('.header').offsetHeight;
-    //                 const elementPosition = targetElement.getBoundingClientRect().top;
-    //                 const offsetPosition = elementPosition - headerHeight;
-
-    //                     window.scrollBy({
-    //                      top: offsetPosition,
-    //                         behavior: 'smooth'
-    //                     });
-    //                 }
-    //             });
-    //         });
-    //     });
-    // </script> -->
 </body>
 </html>
