@@ -246,7 +246,12 @@ button {
   transform: none;
   -webkit-transform: none;
 }
+.welcome-section .item-desc .card-title{
+  font-size: 20px;
+
+}
 .welcome-section .item-desc .card-text {
+  font-size: medium;
   opacity: 0;
   -webkit-transform: translateY(32px);
   transform: translateY(32px);
@@ -519,7 +524,7 @@ opacity: 0;
   }
   .card-title {
     margin: 0 0 8px;
-    font-size: 24px;
+    font-size: 18px;
     line-height: 32px;
   }
 
