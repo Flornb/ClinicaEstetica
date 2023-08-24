@@ -113,11 +113,9 @@
   vertical-align: middle;
   width: 32px;
   height: 32px;
-
 }
 
 /* WELCOME SECTION */
-/******* Common Element CSS Start ******/
 /* * {
   margin: 0px;
   padding: 0px;
@@ -188,12 +186,11 @@ button {
   background: #af994d;
 }
 
-
-/******* Middle section CSS Start ******/
 /* -------- Landing page ------- */
 .welcome-section {
   padding: 20px 20px;
-  margin-top: 120px;
+  margin-top: 120px; 
+  width: 95%;
 }
 .welcome-section .owl-stage {
   margin: 15px 0;
@@ -302,6 +299,7 @@ button {
 }
 .treatments .treatment-item img {
   width: 100%;
+  height: auto;
   display: block;
   margin: 5px auto;
   border-radius: 10px;
@@ -332,6 +330,8 @@ button {
   border-radius: 10px;
 }
 .treatments .treatment-buttons a, .treatment-buttons-two a {
+  display: block;
+  width: 100%;
   color: white;
   text-decoration: none;
   font-weight: 400;
@@ -460,6 +460,11 @@ button {
 }
 /* reduccion de tamaño y alineado en pantallas menores a 370px */
 @media screen and (max-width: 370px) {
+  .header {
+    width: 95%;
+    margin-right: 10px;
+  }
+
   .header .header-icons img {
     width: 20px;
     height: 20px;
@@ -519,10 +524,10 @@ opacity: 0;
 /***** responsive Carousel ******/
 
 @media (min-width: 992px) and (max-width: 1199px) {
-  .line-title {
+  .welcome-section .line-title {
     margin-bottom: 32px;
   }
-  .card-title {
+  .welcome-section .owl-carousel .card-title {
     margin: 0 0 8px;
     font-size: 18px;
     line-height: 32px;
@@ -547,14 +552,16 @@ opacity: 0;
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-  .line-title {
+  .welcome-section .line-title {
     margin-bottom: 32px;
     width: 330px;
   }
-  .card-text {
+  .welcome-section .owl-carousel .card-title{
+    font-size: medium;
+  }
+  .welcome-section .owl-carousel .card-text {
     margin: 0 0 8px;
-    font-size: 24px;
-    line-height: 32px;
+    font-size: medium;
   }
 
   /* -------- Landing page ------- */
@@ -579,19 +586,21 @@ opacity: 0;
   body {
     font-size: 14px;
   }
-  .line-title {
+  .welcome-section .line-title {
     margin-bottom: 20px;
     width: 250px;
   }
-  .card-title {
+  .welcome-section .owl-carousel .card-title {
     margin: 0 0 8px;
-    font-size: 19px;
-    line-height: 24px;
+    font-size: small;
+  }
+  .welcome-section .owl-carousel .card-text {
+    font-size: smaller;
   }
 
   /* -------- Landing page ------- */
   .welcome-section {
-    padding: 30px 15px 20px;
+    padding: 30px 0px 20px;
   }
   .welcome-section .item {
     margin: 0 10px 40px;
