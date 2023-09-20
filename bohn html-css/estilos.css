@@ -10,10 +10,10 @@
   height: 100%;
   z-index: -1;
   background-image: url('./assets/30.webp'); 
+  filter: brightness(82%);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  filter: blur(1.3px); 
 }
 
 /* header */
