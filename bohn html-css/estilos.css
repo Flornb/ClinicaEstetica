@@ -206,6 +206,7 @@ button {
   align-items: flex-end;
   -webkit-align-items: flex-end;
   background: #af994d no-repeat center center / cover;
+  filter: brightness(170%);
   border-radius: 16px;
   overflow: hidden;
   position: relative;
