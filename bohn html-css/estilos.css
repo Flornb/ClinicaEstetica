@@ -74,7 +74,7 @@
   font-size: 18px;
   text-shadow: 2px 2px 4px #c7c7c4;
 }
-.header .nav .treatments-nav, .promos, .cards, .nutri, .terms, .contact  {
+.header .nav .treatments-nav, .promos, .cards, .agenda, .nutri, .terms, .contact  {
   position: relative;
 }
 .header .nav .ul-nav .treatments-nav .treatments-list {
@@ -564,7 +564,7 @@ button {
   .header .nav .ul-nav.show {
     display: flex;
   }
-  .header .nav .ul-nav .treatments-nav, .cards, .nutri, .promos, .terms, .contact {
+  .header .nav .ul-nav .treatments-nav, .cards, .agenda, .nutri, .promos, .terms, .contact {
     position: relative;
     margin: 2px;
     background-color: #af994d;    
