@@ -136,18 +136,18 @@
             <div class="item" style="background-image: url(./assets/gallery/g8.webp);">
                 <div class="item-desc">
                     <h3 class="card-title">Tecnologías</h3>
-                    <p class="card-text"> En Bohn Clínica Estética encontrarás tecnología de vanguardia y tratamientos líderes para realzar tu belleza.</p>
+                    <p class="card-text"> En Bohn Clínica Estética encontrarás tecnología de vanguardia y tratamientos líderes para realzar tu belleza. Equipados con la mejor tecnología, ambientados para hacer única tu experiencia.</p>
                 </div>
             </div>
             <div class="item" style="background-image: url(./assets/gallery/g10.webp);">
                 <div class="item-desc">
-                    <h3 class="card-title">Nuestros consultorios</h3>
-                    <p class="card-text">Equipados con la mejor tecnología, ambientados para hacer única tu experiencia.</p>
+                    <h3 class="card-title">Evaluación Gratuita</h3>
+                    <p class="card-text">Te invitamos a una evaluación gratuita con nuestros expertos en estética. Permítenos analizar tus necesidades y objetivos para recomendarte el tratamiento perfecto para ti. Reserva tu evaluación gratuita hoy mismo y experimenta una atención personalizada!</p>
                 </div>
             </div>
             <div class="item" style="background-image: url(./assets/gallery/g14.webp);">
                 <div class="item-desc">
-                    <h3 class="card-title">Confort</h3>
+                    <h3 class="card-title">Nuestros Espacios</h3>
                     <p class="card-text"> La comodidad es parte de tu experiencia. Descubre un espacio diseñado para tu máximo confort durante tus tratamientos.</p>
                 </div>
             </div>
@@ -160,6 +160,7 @@
             <div class="item" style="background-image: url(./assets/gallery/g1.webp);">
                 <div class="item-desc">
                     <h3 class="card-title">Un hermoso otoño🍂</h3>
+                    <p class="card-text">Disfruta de las vistas increibles desde nuestros consultorios.</p>
                 </div>
             </div>
             <div class="item" style="background-image: url(./assets/gallery/espacios1.webp);">
@@ -171,6 +172,7 @@
             <div class="item" style="background-image: url(./assets/gallery/espacios4.webp);">
                 <div class="item-desc">
                     <h3 class="card-title">o un té!</h3>
+                    <p class="card-text"></p>
                 </div>
             </div>
             <div class="item" style="background-image: url(./assets/gallery/espacios5.webp);">
@@ -184,6 +186,31 @@
                     <h3 class="card-title">¡Te esperamos!</h3>
                 </div>
             </div>
+        </div> 
+    </section>
+    
+    <!-- free evaluation -->
+    <section class="free-evaluation">
+        <div class="Click-here">Solicitá tu Evaluación Gratuita</div>        
+        <div class="custom-model-main">
+            <div class="custom-model-inner">        
+                <div class="close-btn">×</div>
+                <div class="custom-model-wrap">
+                    <div class="pop-up-content-wrap">
+                        <h1> Te brindamos asesoramiento para que alcances tus objetivos y te conviertas en la mejor versión de ti mismo. Buscaremos el tratamiento más adecuado para ti.
+                            <span>Duración: 15 min &amp; Agenda tu hora!</span>.
+                        </h1>
+                        <img class="logo-pop" src="./assets/sinfondo-1-01.png" alt="logo">
+                        <div class="title-pop">
+                            <h1>Agendá tu Evaluación Gratuita</h1>
+                        </div>
+                        <div class="time">
+                            <a class="Click-here" href="https://bohnclinicaestetica.site.agendapro.com/cl/sucursal/2103" target="_blank">Agendá tu hora</a>
+                        </div> 
+                    </div>
+                </div>  
+            </div>  
+            <div class="bg-overlay"></div>
         </div> 
     </section>
 
@@ -255,13 +282,13 @@
                 </div>
                 <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
             </div> -->
-            <!-- <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
+            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
                 <img src="./assets/treatments/imgs (47).webp" alt="Peeling Quimico">
                 <div class="treatment-buttons">
                   <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
                 </div>
                 <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div> -->
+            </div>
         </div>
         <!-- titulo -->
         <div class="title" id="depilation-section">
@@ -689,6 +716,15 @@
                 treatmentsSubMenu.classList.remove('show');
                 }
             });
+        });
+    </script>
+    <!-- popup free evaluation -->
+    <script>
+        $(".Click-here").on('click', function() {
+            $(".custom-model-main").addClass('model-open');
+        }); 
+        $(".close-btn, .bg-overlay").click(function(){
+            $(".custom-model-main").removeClass('model-open');
         });
     </script>
 
