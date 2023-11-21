@@ -2,6 +2,13 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,400;1,200;1,400&display=swap');
 
+
+html{
+  width: 100%; 
+  max-width: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 .background-container {
   position: fixed;
   top: 0;
@@ -278,11 +285,13 @@ button {
   margin: 50px 0;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
   border-radius: 10px;
+  max-width: 100%; 
+  height: auto;
 }
 /* free evaluation pop up */
 .free-evaluation {
   font-family: "Poppins";
-  width: 400px;
+  width: 70%;
   margin: 0 auto;
   display:flex;
   padding: 10px;
@@ -293,9 +302,9 @@ button {
   cursor: pointer;
   background-image: linear-gradient(to bottom, rgba(107, 104, 93, 0.8), #8e99a6);;
   color: #efeeee;
-  width: auto;
-  text-align: justify;
-  font-size:20px;
+  width: 70%;
+  text-align: center;
+  font-size: 1.2rem;
   padding: 20px 20px;
   border-radius: 10px;
   /* text-transform: uppercase; */
@@ -306,7 +315,6 @@ button {
   padding: 20px 20px;
   width: 300px;
   align-items: center;
-  margin-left: 100px;
 }
 .pop-up-content-wrap h1, .title-pop{
   font-size: 18px;
@@ -374,7 +382,7 @@ button {
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
   outline: 0;
-  text-align: left;
+  /* text-align: left; */
   padding: 20px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -420,11 +428,11 @@ button {
 @media screen and (min-width:800px){
 	.custom-model-main:before {
 	  content: "";
-	  display: inline-block;
+	  /* display: inline-block; */
 	  height: auto;
 	  vertical-align: middle;
-	  margin-right: -0px;
-	  height: 100%;
+	  /* margin-right: -0px; */
+	  /* height: 100%; */
 	}
 }
 @media screen and (max-width:799px){
@@ -448,7 +456,7 @@ button {
 .treatments .treatment-item {
   position:  relative;
   cursor: pointer;
-  margin-top: 10px;
+  margin: 0;
   margin-bottom: 50px;
 }
 .treatments .treatment-item img {
@@ -607,8 +615,9 @@ button {
     bottom: -90px;
   }
   .title {
-    margin: 40px 0px;
+    margin: 50px 0px;
     width: 98%;
+    align-items: center;
   }
 
 }
