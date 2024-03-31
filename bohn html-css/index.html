@@ -28,10 +28,15 @@
     <!-- aos -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <!-- tab name -->
     <title>Bohn Clinica Estética</title>
 </head>
 <body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
     <div class="background-container"></div>
     <!-- HEADER -->
     <header class="header">
@@ -46,21 +51,21 @@
                 <li class="treatments-nav"><span>Tratamientos</span><img class="arrow-icon" src="./assets/flecha.png" alt="desplegar"> 
                     <ul class="treatments-list">
                         <li>
-                            <a href='#body-section'>Corporales</a>
+                            <a href='treatments.html#body-section'>Corporales</a>
                         </li>
                         <li>
-                            <a href='#facial-section'>Faciales</a>
+                            <a href='treatments.html#facial-section'>Faciales</a>
                         </li>
                         <li class="depilation"><span>Depilación</span><img class="arrow-icon" src="./assets/flecha.png" alt="desplegar">
                             <ul class='depilation-list'>
                                 <li>
-                                    <a href='#depilation-fem'>Femenino</a>
+                                    <a href='treatments.html#depilation-fem'>Femenino</a>
                                 </li>
                                 <li>
-                                    <a href='#depilation-masc'>Masculino</a>
+                                    <a href='treatments.html#depilation-masc'>Masculino</a>
                                 </li>
                                 <li>
-                                    <a href='#depilation-zone'>Zonas</a>
+                                    <a href='treatments.html#depilation-zone'>Zonas</a>
                                 </li>
                             </ul>
                         </li>
@@ -74,13 +79,13 @@
                 </li> 
                 <!-- other items of navbar  -->
                 <li class="cards">
-                    <a href='#card-section'>Gift Cards</a>
+                    <a href='treatments.html#card-section'>Gift Cards</a>
                 </li>
                 <!-- <li class="nutri">
                     <a href='#nutrition-section'>Nutrición</a>
                 </li> -->
                 <li class="promos">
-                    <a href='#promos-section'>Promociones</a>
+                    <a href='treatments.html#promos-section'>Promociones</a>
                 </li>
 
                 <!-- other items of navbar  -->               
@@ -187,9 +192,33 @@
             </div>
         </div> 
     </section>
-    
-    <!-- free evaluation -->
+
+    <!-- about us -->
+    <section class="aboutus-section">
+        <div class="wrapperas" id="appas">
+            <div class="card-form">
+              <div class="card-list">
+                <div class="card-item -front">
+                  <div class="card-item__side">
+                    <div class="card-item__cover">
+                      <img src="./assets/aboutus/aboutus1.jpg"class="card-item__bg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card-form__inner">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      
+                <button class="card-form__button">Explora nuestra web</button>
+              </div>
+            </div>
+          </div>
+
+    </section>
+        <!-- free evaluation -->
     <section class="free-evaluation">
+        <h3 class="fe-title">Evaluación Gratuita</h3>
+        <p class="fe-text">Es muy importante solicitar una evaluación previa antes de cualquier tratamiento estético. Esta evaluación permite al profesional comprender tus necesidades y expectativas. Además, facilita la personalización del tratamiento, asegurando resultados seguros y satisfactorios. Esta medida no solo optimiza los resultados estéticos, sino que también promueve tu salud y bienestar.</p>
         <div class="Click-here">Solicita tu Evaluación Gratuita</div>        
         <div class="custom-model-main">
             <div class="custom-model-inner">        
@@ -212,381 +241,44 @@
             <div class="bg-overlay"></div>
         </div> 
     </section>
+    <!-- TRATAM ADELANTO -->
+    <div class="free-evaluation">
+        <h3 class="fe-title">Tratamientos</h3>
+        <div class="treatments-resume"> 
+            <!-- algunos tratamientos -->
+            <div class="content-section"> 
+                <div class="treatment-item-res" data-aos="zoom-in-up" data-aos-duration="2000">
+                    <img src="./assets/treatments/Anticelulítico NUEVO.webp" alt="Anticelulitico">
+                    <div class="treatment-buttons">
+                      <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
+                    </div>
+                    <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
+                </div>        
+                <div class="treatment-item-res" data-aos="zoom-in-up" data-aos-duration="2000">
+                    <img src="./assets/treatments/HIFU 7D LIPOLASER.webp" alt="Hifu + lipolaser">
+                    <div class="treatment-buttons">
+                      <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
+                    </div>
+                    <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
+                </div>
+                <div class="treatment-item-res" data-aos="zoom-in-up" data-aos-duration="2000">
+                    <img src="./assets/treatments/Full Body.webp" alt="Hifu + lipolaser 2 zonas">
+                    <div class="treatment-buttons">
+                      <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
+                    </div>
+                    <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
+                </div>
+                
+            </div>    
+        </div>   
+        
+    </div>
+    <div class="see-treatments">
+        <a class="Click-here" href="/bohn html-css/treatments.html" target="_blank">VER TODOS LOS TRATAMIENTOS</a>  
+    </div>
 
-    <!-- TREATMETS -->
-    <main class="treatments" style="margin-top: -30px;">
-        <!-- titulo -->
-        <div class="title" id="body-section">
-            <span>
-               TRATAMIENTOS CORPORALES
-            </span>
-        </div>
-        <!-- tratamientos corporales -->
-        <div class="content-section"> 
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/Anticelulítico NUEVO.webp" alt="Anticelulitico">
-                <div class="treatment-buttons">
-                  <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>        
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/HIFU 7D LIPOLASER.webp" alt="Hifu + lipolaser">
-                <div class="treatment-buttons">
-                  <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/Full Body.webp" alt="Hifu + lipolaser 2 zonas">
-                <div class="treatment-buttons">
-                  <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-            
-        </div>
-        <!-- titulo -->
-        <div class="title" id="facial-section" >
-            <span>
-               TRATAMIENTOS FACIALES
-            </span>
-        </div>
-        <!-- facial -->
-        <div class="content-section" > 
-            <!-- <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/REJUVENECIMIENTO FACIAL.webp" alt="Rejuvenecimiento Facial">
-                <div class="treatment-buttons">
-                  <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div> -->
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/Hifu Facial 7D.webp" alt="Hifu Facial Completo">
-                <div class="treatment-buttons">
-                  <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/Limpieza Profunda.webp" alt="Limpieza Facial Profunda">
-                <div class="treatment-buttons">
-                  <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-            <!-- <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (40).webp" alt="Microneedling">
-                <div class="treatment-buttons">
-                  <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div> -->
-            <!-- <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/Hollywood Peeling .webp" alt="Hollywood Peeling">
-                <div class="treatment-buttons">
-                  <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div> -->
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (47).webp" alt="Peeling Quimico">
-                <div class="treatment-buttons">
-                  <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-        </div>
-        <!-- titulo -->
-        <div class="title" id="depilation-section">
-            <span>
-               DEPILACIÓN
-            </span>
-        </div>
-            <!-- depilacion -->
-        <div class="content-section" id="depilation-fem"> 
-            <!-- depilacion femenina -->
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src= "./assets/treatments/Depilación Laser Pack Base.webp" alt="Depilacion Laser Pack Base">
-                <div class="treatment-buttons">
-                    <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/Depilación Base Pack Plus.webp" alt="Depilacion Laser Pack Plus">
-                <div class="treatment-buttons">
-                    <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (2).webp" alt="Depilacion Laser TRIPACK FEM">
-                <div class="treatment-buttons">
-                    <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (42).webp" alt="Depilacion Laser ZONAS INTIMAS">
-                <div class="treatment-buttons">
-                    <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (9).webp" alt="Depilacion Laser ZONAS PEQUEÑAS ROSTRO">
-                <div class="treatment-buttons">
-                    <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (1).webp" alt="Depilacion Laser ROSTRO COMPLETO">
-                <div class="treatment-buttons">
-                    <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (21).webp" alt="Depilacion Laser CUERPO COMPLETO">
-                <div class="treatment-buttons">
-                    <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-        </div>
 
-            
-            <!-- depilacion masc -->
-        <div class="content-section" id="depilation-masc"> 
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (45).webp" alt="Depilacion Laser Pack Base MASC">
-                <div class="treatment-buttons">
-                    <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (46).webp" alt="Depilacion Laser Pack Plus MASC">
-                <div class="treatment-buttons">
-                    <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (3).webp" alt="Depilacion Laser TRIPACK MASC">
-                <div class="treatment-buttons">
-                    <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (20).webp" alt="Depilacion Laser Barba y Cuello MASC">
-                <div class="treatment-buttons">
-                    <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-            </div>
-        </div>
-
-        <!-- depilacion por zonas -->
-        <div class="content-section" id="depilation-zone"> 
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (11).webp" alt="Depilacion Laser 2 ZONAS">
-                <div class="treatment-buttons">
-                    <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (13).webp" alt="Depilacion Laser 3 ZONAS">
-                <div class="treatment-buttons">
-                    <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (15).webp" alt="Depilacion Laser 4 ZONAS">
-                <div class="treatment-buttons">
-                    <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (8).webp" alt="Depilacion Laser XS">
-                <div class="treatment-buttons">
-                    <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (10).webp" alt="info zonas XS">
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (6).webp" alt="Depilacion Laser S">
-                <div class="treatment-buttons">
-                    <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (12).webp" alt="info zonas S">
-            </div>
-
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (5).webp" alt="Depilacion Laser M">
-                <div class="treatment-buttons">
-                    <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (14).webp" alt="info zonas M">
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (4).webp" alt="Depilacion Laser L">
-                <div class="treatment-buttons">
-                    <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (16).webp" alt="info zonas L">
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (7).webp" alt="Depilacion Laser XL">
-                <div class="treatment-buttons">
-                    <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (17).webp" alt="info zonas XL">
-            </div>
-        </div>
-    
-        <!-- titulo -->
-        <!-- <div class="title" id="nutrition-section">
-            <span>
-               NUTRICIÓN
-            </span>
-        </div> -->
-        <!-- Nutricion -->
-        <!-- <div class="content-section"> 
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <div>
-                <img src="./assets/treatments/imgs (41).webp" alt="Nutrición">
-                </div>
-                <div class="treatment-buttons"> 
-                  <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a> 
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-        </div> -->
-        <!-- titulo -->
-        <!-- <div class="title" id="massage-section">
-            <span>
-               SPA & MASAJES
-            </span>
-        </div> -->
-            <!-- masajes -->
-        <!-- <div class="content-section"> 
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/Masajes Descontracurantes .webp" alt="Masajes Descontracturantes">
-                <div class="treatment-buttons"> 
-                  <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/Masajes Relajantes.webp" alt="Masajes Relajantes">
-                <div class="treatment-buttons">
-                  <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a> 
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-        </div> -->
-        <!-- titulo -->
-        <!-- <div class="title" id="bride-section">
-            <span>
-               NOVIAS
-            </span>
-        </div> -->
-        <!-- novias -->
-        <!-- <div class="content-section">
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (43).webp" alt="Pack Novia Base">
-                <div class="treatment-buttons">
-                  <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (44).webp" alt="Pack Novia Plus">
-                <div class="treatment-buttons">
-                  <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-        </div> -->
-
-        <!-- titulo -->
-        <div class="title" id="card-section">
-            <span>
-               GIFT CARDS
-            </span>
-        </div>
-        <!-- gift cards -->
-        <div class="content-section">
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (24).webp" alt="Gift Card 51000">
-                <div class="treatment-buttons">
-                  <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar Gift Card $51.000</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (25).webp" alt="Gift Card 56000">
-                <div class="treatment-buttons">
-                  <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar Gift Card $56.000</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (26).webp" alt="Gift Card 61000">
-                <div class="treatment-buttons">
-                  <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar Gift Card $61.000</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/imgs (27).webp" alt="Gift Card 50000">
-                <div class="treatment-buttons">
-                  <a href="https://micrositios.getnet.cl/bohnestetica" target="_blank">Comprar Gift Card precio $30.000</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Canjeable por una limpieza facial profunda o una sesión de masajes relajantes/descontracturantes o $50.000 de bono para otros tratamientos | *Haz click y coloca el monto del servicio seleccionado</small>
-            </div>
-        </div>
-
-        <!-- titulo -->
-        <div class="title" id="promos-section">
-            <span>
-               DESCUENTOS Y PROMOCIONES
-            </span>
-        </div>
-        <!-- referidos -->
-        <div class="content-section">
-            <div class="treatment-item" data-aos="zoom-in-up" data-aos-duration="2000">
-                <img src="./assets/treatments/REFERIDOS.webp" alt="Referidos">
-                <div class="treatment-buttons">
-                  <a href="https://wa.me/56932066518" target="_blank">Referir</a>
-                </div>
-                <small style="text-shadow: 2px 2px 4px #c7c7c4; color: black;">*Haz click para continuar al chat con nosotros</small>
-            </div>
-        </div>
-    </main>
+   
 
 
     <!-- FOOTER -->
@@ -637,144 +329,10 @@
         </div>
     </section>
     <div class="row" style="font-size:0.8em; padding: 5px; display: flex; justify-content: center;">
-        FB Copyright © 2023 FB - Todos los derechos reservados || <a href= https://wa.me/5493513312257 target="_blank">Diseño web: BohnFlorencia</a>
+        BohnWD Copyright © 2023 - Todos los derechos reservados || <a href= https://wa.me/5493513312257 target="_blank">Diseño web: Bohn Web Design</a>
     </div>
 
-    <!-- reload page = scroll in 0 -->
-    <script>
-        window.addEventListener('beforeunload', function () {
-        window.scrollTo(0, 0);
-    });
-    </script>
-
-    <!-- js para desplegar submenus y clicks -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-
-            // hamburguer menu
-            const menuToggle = document.querySelector('.menu-icon');
-            const ulNav = document.querySelector('.ul-nav'); 
-
-            menuToggle.addEventListener('click', function (event){
-                event.stopPropagation();
-                ulNav.classList.toggle('show');
-            });
-
-            document.body.addEventListener('click', function(event) {
-            if (!event.target.closest('.menu-icon') && !event.target.closest('.ul-nav')) {
-                ulNav.classList.remove('show');
-                }
-            });
-        
-            // <!-- function to close submenus -->
-            function closeSubmenus() {
-                treatmentsSubMenu.classList.remove('show');
-                ulNav.classList.remove('show');
-            }
-
-            // new
-            const links = document.querySelectorAll('.ul-nav a[href^="#"]');
-
-            const treatmentsMenu = document.querySelector('.treatments-nav');
-            const treatmentsSubMenu = document.querySelector('.treatments-list'); 
-
-            links.forEach(link => {
-                link.addEventListener('click', function(event) {
-                    event.preventDefault();
-                    event.stopPropagation();
-                    closeSubmenus();
-                    const targetId = link.getAttribute('href').substring(1);
-                    const targetElement = document.getElementById(targetId);
-                
-
-                    if (targetElement) {
-                        const headerHeight = document.querySelector('.header').offsetHeight;
-                        const elementPosition = targetElement.getBoundingClientRect().top;
-                        const offsetPosition = elementPosition - headerHeight;
-
-                        window.scrollBy({
-                            top: offsetPosition,
-                            behavior: 'smooth'
-                        });
-                    }
-                });
-            });
-
-        // Add click event to submenu's elements
-        treatmentsSubMenu.querySelectorAll('a').forEach (submenuLink => {
-            submenuLink.addEventListener('click', function() {
-            closeSubmenus(); 
-            });
-        });
-            
-        treatmentsMenu.addEventListener('click', function(event){
-            if (event.target.tagName !== 'A') {           
-                event.preventDefault();
-            }
-            treatmentsSubMenu.classList.toggle('show');
-        });
-
-        document.addEventListener('click', function(event){
-            const targetElement = event.target;
-
-            if(
-                !targetElement.closest('.treatments-nav') &&
-                !targetElement.closest('.treatments-list')) {
-                treatmentsSubMenu.classList.remove('show');
-                }
-            });
-        });
-    </script>
-    <!-- popup free evaluation -->
-    <script>
-        $(".Click-here").on('click', function() {
-            $(".custom-model-main").addClass('model-open');
-        }); 
-        $(".close-btn, .bg-overlay").click(function(){
-            $(".custom-model-main").removeClass('model-open');
-        });
-    </script>
-
-    <!-- animación imgs with aos -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-
-    <!-- owl carousel -->
-    <!-- carousel -->
-    <script>
-        $(".custom-carousel").owlCarousel({
-        autoWidth: true,
-        loop: true,
-        items: 4,
-        });
-        $(document).ready(function () {
-            $(".custom-carousel .item").click(function () {
-                $(".custom-carousel .item").not($(this)).removeClass("active");
-                $(this).toggleClass("active");
-            });
-        });
-    </script>
-
-    <!--  header smaller on down scroll-->
-    <script>
-        document.addEventListener('scroll', function() {
-            const header = document.querySelector('.header');
-            const logo = document.querySelector ('.logo');
-            const scrollPosition = window.pageYOffset;
-
-            if (scrollPosition > 0) {
-                header.style.height = '80px';
-                logo.style.height = '100px';
-              
-                
-            } else {
-                // console.log ('return to original size');
-                header.style.height = '140px';
-                logo.style.height = '160px';
-            }
-        });
-    </script>
+    <script src="index.js"></script>
+    
 </body>
 </html>
